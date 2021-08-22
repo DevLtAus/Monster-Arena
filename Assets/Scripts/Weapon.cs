@@ -12,12 +12,17 @@ public class Weapon : MonoBehaviour
 
     //(Elliot) Collect rocket prefab for instantiation
     public Rocket rocketPrefab;
+    private float curCooldown;
+    //(Elliot) Speed and cooldown of rockets are public variables
     public float speed;
+    public float cooldown;
+    
  
     // Start is called before the first frame update
     void Start()
     {
-       trans = this.gameObject.GetComponent<Transform>(); 
+       trans = this.gameObject.GetComponent<Transform>();
+       curCooldown = 0;
     }
 
     // Update is called once per frame
@@ -33,8 +38,9 @@ public class Weapon : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
         //(Elliot) Instantiates a rocket in the direction of the mouse cursor when the mouse is clicked
-        if (Input.GetMouseButtonDown(0)) {
-            //cooldown = 0.3f;
+        curCooldown -= Time.deltaTime;
+        if (Input.GetMouseButtonDown(0) && curCooldown <= 0) {
+            curCooldown = cooldown;
             Rocket rocket = Instantiate(rocketPrefab);
             rocket.transform.position = transform.position;
             rocket.angleProp = angle;
