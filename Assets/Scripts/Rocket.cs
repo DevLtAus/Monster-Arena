@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
     private Weapon weapon;
+    private GameObject player;
     //(Elliot) Collects angle and speed variables from Weapon script
     private float angle;
     public float angleProp
@@ -36,8 +37,8 @@ public class Rocket : MonoBehaviour
     {
         //(Elliot) Locates 'Weapon' Game Component
         weapon = GameObject.Find("Weapon").GetComponent<Weapon>();
+        player = GameObject.Find("Player");
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        // transform.Translate(Vector3.right * 3);
     }
 
     // Update is called once per frame
@@ -52,6 +53,12 @@ public class Rocket : MonoBehaviour
     {
         if (col.gameObject.tag != "Player")
         {
+            if (Vector2.Distance(transform.position, player.transform.position) < 3)
+            {
+                Vector2 direction = player.transform.position - transform.position;
+                Debug.Log("yes");
+                player.GetComponent<Rigidbody2D>().AddForce(direction);
+            }
             Destroy(gameObject);
         }
     }
