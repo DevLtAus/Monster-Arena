@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketPrefab: {fileID: 2350097930573198772, guid: f15ab34c0e281094b9fe50dc77995779, type: 3}
-  speed: 20
+  speed: 40
   cooldown: 1
 --- !u!1 &7125173388843660548
 GameObject:
