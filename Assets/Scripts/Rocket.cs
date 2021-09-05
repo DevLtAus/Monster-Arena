@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
-    private Weapon weapon;
     private GameObject player;
     //(Elliot) Collects angle and speed variables from Weapon script
     private float angle;
@@ -31,12 +30,14 @@ public class Rocket : MonoBehaviour
             speed = value;
         }
     }
+    //(Elliot) public variables for radius of impact and force for which to affect repelling the player
+    public float fieldOfImpact;
+    public float force;
 
     // Start is called before the first frame update
     void Start()
     {
-        //(Elliot) Locates 'Weapon' Game Component
-        weapon = GameObject.Find("Weapon").GetComponent<Weapon>();
+        //(Elliot) Locates 'Player' Game Component
         player = GameObject.Find("Player");
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
@@ -48,18 +49,31 @@ public class Rocket : MonoBehaviour
         transform.Translate(Vector3.right * speed * Time.deltaTime, Space.Self);
     }
 
-    //(Elliot) Destroy rocket on impact with anything but the player
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag != "Player")
         {
-            if (Vector2.Distance(transform.position, player.transform.position) < 3)
+            float distance = Vector2.Distance(transform.position, player.transform.position);
+
+            if (distance < fieldOfImpact)
             {
+                //(Elliot) Formula for calculating force to repel given how close the player is to the rocket
+                //e.g if distance = basically nothing, the full force will be applied. If the distance is barely within the FOI, only a small fraction of the force will result.
+                force -= distance / fieldOfImpact * force;
+
                 Vector2 direction = player.transform.position - transform.position;
-                Debug.Log("yes");
-                player.GetComponent<Rigidbody2D>().AddForce(direction);
+                //(Elliot) Applying the force to player
+                player.GetComponent<Rigidbody2D>().AddForce(direction * force);
             }
+            //(Elliot) Destroy rocket on impact with anything but the player
             Destroy(gameObject);
         }
+    }
+
+    //(Elliot) Open the prefab in Unity to see and set the field of impact 
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, fieldOfImpact);
     }
 }
