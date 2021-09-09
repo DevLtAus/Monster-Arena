@@ -36,3 +36,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Packages/packages-lock.json
+Logs/AssetImportWorker0.log
