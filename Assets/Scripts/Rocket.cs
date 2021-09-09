@@ -65,6 +65,12 @@ public class Rocket : MonoBehaviour
                 //(Elliot) Applying the force to player
                 player.GetComponent<Rigidbody2D>().AddForce(direction * force);
             }
+
+            if (col.gameObject.tag == "Weak")
+            {
+                WeakSpot ws = col.GetComponent<WeakSpot>();
+                ws.Damage();
+            }
             //(Elliot) Destroy rocket on impact with anything but the player
             Destroy(gameObject);
         }
