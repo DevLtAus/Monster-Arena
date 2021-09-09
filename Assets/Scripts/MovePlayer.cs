@@ -32,11 +32,11 @@ public class MovePlayer : MonoBehaviour
 
     // (Lucas) Whether or not the player is in the air. Leaving get and set commented out since they're not likely to be useful but there's a chance.
     private bool aerial = false;
-    /*public bool Aerial
+    public bool Aerial
     {
         get { return aerial; }
         set { aerial = value; }
-    }*/
+    }
 
     // (Lucas) Making pushed public since it is entirely for detecting if the player is being pushed by something else.
     public bool pushed = false;
