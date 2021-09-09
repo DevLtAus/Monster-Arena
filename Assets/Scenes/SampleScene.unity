@@ -162,9 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fa256a0e8cd2840ba8c063d214af54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBody: {fileID: 1397234413}
+  playerBody: {fileID: 1067371116}
   playerTrans: {fileID: 1397234408}
-  movPlayer: {fileID: 1397234409}
+  movPlayer: {fileID: 1067371115}
   moveInfluence: {x: 5, y: 0}
   mouseInfluence: {x: 2, y: 1}
   minMoveVel: {x: 3, y: 18}
