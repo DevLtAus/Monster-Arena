@@ -7,15 +7,19 @@ public class MovePlayer : MonoBehaviour
     private Rigidbody2D body;
     private Transform trans;
     [SerializeField] private float horizontalInput = 0f;
-    private int jumpBufferTimer = 0;
+
+    // (Lucas) Buffer timers for if the player is trying to jump while not on the ground.
+    private int jumpBufferTimer = 0; // (Lucas) Trying to jump right before landing.
+    private int fallBufferTimer = 0; // (Lucas) Trying to jump right after running off a platform.
 
     // (Lucas) Serialising these fields so they can still be accessed in the inspector.
     // (Lucas) I've added values that I've found work decent.
     [SerializeField] private float accel; // (Lucas) 3
     [SerializeField] private float maxSpeed; // (Lucas) 15
     [SerializeField] private float jumpSpeed; // (Lucas) 23
-    //[SerializeField] private float maxFallSpeed;
-    [SerializeField] private int jumpBuffer; // (Lucas) 20
+    [SerializeField] private int jumpBuffer; // (Lucas) 7
+    [SerializeField] private int fallBuffer; // (Lucas) 2
+
     // (Lucas) Enabling different behaviours in the air and on the ground.
     // (Lucas) This is just for making the movement feel good.
     [SerializeField] private float apexGrav; // (Lucas) 3
@@ -30,6 +34,7 @@ public class MovePlayer : MonoBehaviour
     // (Lucas) Booleans for being in the air.
     private bool buffering = false;
     private bool jumped = false;
+    private bool canAirJump = false;
 
     // (Lucas) Whether or not the player is in the air. Leaving get and set commented out since they're not likely to be useful but there's a chance.
     private bool aerial = false;
@@ -54,29 +59,28 @@ public class MovePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // (Lucas) Make the jumpBufferTimer tick down.
-        if (jumpBufferTimer >= 0) {
-            jumpBufferTimer--;
-        }
-        else {
-            switch(buffering) {
-                case true:
-                    buffering = false;
-                    break;
-                case false:
-                    break;
-            }
-        }
-
         // (Lucas) Get horizontal input and store it.
         horizontalInput = Input.GetAxis("Horizontal");
         // (Lucas) Check if the player wants to jump.
         if (Input.GetButtonDown("Jump")) {
             switch(aerial) {
                 case true:
-                    // (Lucas) In the air, can't jump but can start buffering the next jump in case the player was a couple frames early.
-                    jumpBufferTimer = jumpBuffer;
-                    buffering = true;
+                    switch(canAirJump) {
+                        case false:
+                            // (Lucas) In the air and can't jump but can start buffering the next jump in case the player was a couple frames early.
+                            jumpBufferTimer = jumpBuffer;
+                            buffering = true;
+                            break;
+                        case true:
+                            switch(jumped) {
+                                case true:
+                                    break;
+                                case false:
+                                    jumped = true;
+                                    break;
+                            }
+                            break;
+                    }
                     break;
                 case false:
                     // (Lucas) On the ground, can jump.
@@ -95,6 +99,34 @@ public class MovePlayer : MonoBehaviour
     // (Lucas) Physics calculations are called here.
     void FixedUpdate()
     {
+        // (Lucas) Make the jumpBufferTimer tick down.
+        if (jumpBufferTimer > 0) {
+            jumpBufferTimer -= 1;
+        }
+        else {
+            switch(buffering) {
+                case true:
+                    buffering = false;
+                    break;
+                case false:
+                    break;
+            }
+        }
+
+        // (Lucas) Make the fallBufferTimer tick down.
+        if (fallBufferTimer > 0) {
+            fallBufferTimer -= 1;
+        }
+        else {
+            switch(canAirJump) {
+                case true:
+                    canAirJump = false;
+                    break;
+                case false:
+                    break;
+            }
+        }
+
         // (Lucas) Check if the player is in the air then set gravity and drag accordingly.
         switch(aerial) {
             case true:
@@ -162,6 +194,7 @@ public class MovePlayer : MonoBehaviour
     {
         if (col.gameObject.tag == "Ground") {
             aerial = false;
+            fallBufferTimer = 0;
         }
     }
 
@@ -170,6 +203,8 @@ public class MovePlayer : MonoBehaviour
     {
         if (col.gameObject.tag == "Ground") {
             aerial = true;
+            fallBufferTimer = fallBuffer;
+            canAirJump = true;
         }
     }
 
@@ -181,6 +216,8 @@ public class MovePlayer : MonoBehaviour
         body.AddForce(trans.up * jumpSpeed, ForceMode2D.Impulse);
         jumped = false;
         buffering = false;
+        fallBufferTimer = 0;
+        canAirJump = false;
         //aerial = true;
     }
 }

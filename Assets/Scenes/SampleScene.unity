@@ -1567,7 +1567,8 @@ MonoBehaviour:
   accel: 3
   maxSpeed: 15
   jumpSpeed: 23
-  jumpBuffer: 20
+  jumpBuffer: 7
+  fallBuffer: 2
   apexGrav: 3
   riseGrav: 4
   fallGrav: 13
