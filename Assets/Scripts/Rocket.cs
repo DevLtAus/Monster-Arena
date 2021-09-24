@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
+    public GameObject explosionPrefab;
     private GameObject player;
     //(Elliot) Collects angle and speed variables from Weapon script
     private float angle;
@@ -71,7 +72,8 @@ public class Rocket : MonoBehaviour
                 WeakSpot ws = col.GetComponent<WeakSpot>();
                 ws.Damage();
             }
-            //(Elliot) Destroy rocket on impact with anything but the player
+            //(Elliot) Create explosion effect and Destroy rocket on impact with anything but the player
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
