@@ -28,8 +28,8 @@ public class CameraMovement : MonoBehaviour
     // (Lucas) more than the mouse.
     // (Lucas) They are stored as Vector2 values to allow for influence to differ
     // (Lucas) between axes.
-    [SerializeField] private Vector2 moveInfluence; // (Lucas) 5, 0
-    [SerializeField] private Vector2 mouseInfluence; // (Lucas) 1, 1
+    [SerializeField] private Vector2 moveInfluence; // (Lucas) 2, 2
+    [SerializeField] private Vector2 mouseInfluence; // (Lucas) 1.5, 1.5
 
     // (Lucas) Buffer regions for player speed. Move is the normal speed region
     // (Lucas) for walking and jumping, fast is to cover circumstances when the

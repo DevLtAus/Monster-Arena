@@ -14,6 +14,7 @@ public class MovePlayer : MonoBehaviour
     [SerializeField] private float accel; // (Lucas) 3
     [SerializeField] private float maxSpeed; // (Lucas) 15
     [SerializeField] private float jumpSpeed; // (Lucas) 23
+    //[SerializeField] private float maxFallSpeed;
     [SerializeField] private int jumpBuffer; // (Lucas) 20
     // (Lucas) Enabling different behaviours in the air and on the ground.
     // (Lucas) This is just for making the movement feel good.
