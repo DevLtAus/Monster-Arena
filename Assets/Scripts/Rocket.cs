@@ -6,6 +6,8 @@ public class Rocket : MonoBehaviour
 {
     public GameObject explosionPrefab;
     private GameObject player;
+    // (Lucas) Storing a reference to MovePlayer to tell the player they've been pushed by a rocket.
+    private MovePlayer movePlayer;
     //(Elliot) Collects angle and speed variables from Weapon script
     private float angle;
     public float angleProp
@@ -40,6 +42,7 @@ public class Rocket : MonoBehaviour
     {
         //(Elliot) Locates 'Player' Game Component
         player = GameObject.Find("Player");
+        movePlayer = player.GetComponent<MovePlayer>();
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 
@@ -65,6 +68,8 @@ public class Rocket : MonoBehaviour
                 Vector2 direction = player.transform.position - transform.position;
                 //(Elliot) Applying the force to player
                 player.GetComponent<Rigidbody2D>().AddForce(direction * force);
+                // (Lucas) Tell the player they have been pushed.
+                movePlayer.pushed = true;
             }
 
             if (col.gameObject.tag == "Weak")

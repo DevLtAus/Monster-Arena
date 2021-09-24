@@ -16,6 +16,7 @@ public class MovePlayer : MonoBehaviour
     // (Lucas) I've added values that I've found work decent.
     [SerializeField] private float accel; // (Lucas) 3
     [SerializeField] private float maxSpeed; // (Lucas) 15
+    [SerializeField] private float maxRocketSpeed; // (Lucas)
     [SerializeField] private float jumpSpeed; // (Lucas) 23
     [SerializeField] private int jumpBuffer; // (Lucas) 7
     [SerializeField] private int fallBuffer; // (Lucas) 2
@@ -178,7 +179,11 @@ public class MovePlayer : MonoBehaviour
         // (Lucas) Check if the player is being pushed. If they aren't, cap their max speed.
         switch(pushed) {
             case true:
-                // (Lucas) Don't cap speed.
+                // (Lucas) Rocket jumping. Player can move faster horizontally
+                if (Mathf.Abs(body.velocity.x) > maxRocketSpeed)
+                {
+                    body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * maxRocketSpeed, body.velocity.y);
+                }
                 break;
             case false:
                 if (Mathf.Abs(body.velocity.x) > maxSpeed)
@@ -194,6 +199,7 @@ public class MovePlayer : MonoBehaviour
     {
         if (col.gameObject.tag == "Ground") {
             aerial = false;
+            pushed = false;
             fallBufferTimer = 0;
         }
     }
