@@ -45,8 +45,13 @@ public class MovePlayer : MonoBehaviour
         set { aerial = value; }
     }
 
+    // (Lucas) Rocket jumping stuff.
     // (Lucas) Making pushed public since it is entirely for detecting if the player is being pushed by something else.
     public bool pushed = false;
+    // (Lucas) Buffer for landing after a rocket jump to preserve momentum for a short while.
+    [SerializeField] private int rocketJumpSpeedBuffer; // (Lucas) 5
+    private int rocketJumpSpeedBufferTimer = 0;
+    private bool pushing = false;
 
 
 
@@ -128,6 +133,8 @@ public class MovePlayer : MonoBehaviour
             }
         }
 
+        
+
         // (Lucas) Check if the player is in the air then set gravity and drag accordingly.
         switch(aerial) {
             case true:
@@ -143,6 +150,21 @@ public class MovePlayer : MonoBehaviour
                 }
                 break;
             case false:
+                // (Lucas) Make the rocketJumpSpeedBufferTimer tick down.
+                if (rocketJumpSpeedBufferTimer > 0) {
+                   rocketJumpSpeedBufferTimer -= 1;
+                    pushing = true;
+                }
+                else {
+                    switch(pushing) {
+                        case true:
+                            pushing = false;
+                            pushed = false;
+                            break;
+                        case false:
+                            break;
+                    }
+                }
                 body.gravityScale = groundGrav;
                 body.drag = groundDrag;
                 break;
@@ -180,6 +202,7 @@ public class MovePlayer : MonoBehaviour
         switch(pushed) {
             case true:
                 // (Lucas) Rocket jumping. Player can move faster horizontally
+                //pushing = true;
                 if (Mathf.Abs(body.velocity.x) > maxRocketSpeed)
                 {
                     body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * maxRocketSpeed, body.velocity.y);
@@ -194,13 +217,35 @@ public class MovePlayer : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Ground") {
+            switch(pushed) {
+                case true:
+                    rocketJumpSpeedBufferTimer = rocketJumpSpeedBuffer;
+                    break;
+                case false:
+                    break;
+            }
+        }
+    }
+
     // (Lucas) Check if the player is on the ground.
     void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.tag == "Ground") {
             aerial = false;
-            pushed = false;
+            //pushed = false;
             fallBufferTimer = 0;
+            /*switch(pushed) {
+                case true:
+                    //rocketLanded = true;
+                    rocketJumpSpeedBufferTimer = rocketJumpSpeedBuffer;
+                    break;
+                case false:
+                    //rocketLanded = false;
+                    break;
+            }*/
         }
     }
 

@@ -1579,6 +1579,7 @@ MonoBehaviour:
   apexBufferPos: 1
   apexBufferNeg: -1
   pushed: 0
+  rocketJumpSpeedBuffer: 5
 --- !u!50 &1067371116
 Rigidbody2D:
   serializedVersion: 4
