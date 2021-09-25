@@ -10,7 +10,7 @@ public class HealthManager : MonoBehaviour
     private SceneChanger sceneChanger;
 
     // (Lucas) Boss health
-    private int bHealth;
+    private float bHealth;
     public int bossMaxHealth;
 
     public void DamageBoss(int damage)
@@ -23,7 +23,7 @@ public class HealthManager : MonoBehaviour
         }
     }
 
-    public void SetBossHealth(int hp)
+    public void SetBossHealth(float hp)
     {
         bHealth = hp;
     }

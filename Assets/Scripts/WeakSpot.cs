@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeakSpot : MonoBehaviour
 {
-
+    //(Elliot) health is public variable with value of 1 by default
     public int health = 1;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,7 @@ public class WeakSpot : MonoBehaviour
         
     }
 
+    //(Elliot) Damage the weak spot and disable it when health reaches 0
     public void Damage(int damage)
     {
         health -= damage;
