@@ -39,7 +39,7 @@ public class Weapon : MonoBehaviour
 
         //(Elliot) Instantiates a rocket in the direction of the mouse cursor when the mouse is clicked
         curCooldown -= Time.deltaTime;
-        if (Input.GetMouseButtonDown(0) && curCooldown <= 0) {
+        if (Input.GetButtonDown("Fire1") && curCooldown <= 0) {
             curCooldown = cooldown;
             Rocket rocket = Instantiate(rocketPrefab);
             rocket.transform.position = transform.position;
