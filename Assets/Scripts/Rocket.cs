@@ -68,7 +68,7 @@ public class Rocket : MonoBehaviour
             if (col.gameObject.tag == "Weak")
             {
                 WeakSpot ws = col.GetComponent<WeakSpot>();
-                ws.Damage();
+                ws.Damage(1); //(Elliot) Temporary rocket damage
             }
             //(Elliot) Create explosion effect and Destroy rocket on impact with anything but the player
             GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);

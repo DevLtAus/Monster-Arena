@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeakSpot : MonoBehaviour
+public class BossHealth : MonoBehaviour
 {
-
-    public int health = 1;
+    public GameObject[] weakSpots;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +15,5 @@ public class WeakSpot : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void Damage(int damage)
-    {
-        health -= damage;
-        if (health <= 0)
-        {
-            gameObject.SetActive(false);
-        }
     }
 }
