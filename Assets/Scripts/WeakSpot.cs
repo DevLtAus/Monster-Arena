@@ -24,6 +24,7 @@ public class WeakSpot : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            health = 0;
             gameObject.SetActive(false);
         }
     }
