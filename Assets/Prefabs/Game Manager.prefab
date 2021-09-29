@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2320d84c132beb44199f1003552a35c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossMaxHealth: 7
   pHealth: 3
   playerMaxHealth: 3
 --- !u!114 &1075251056678910863
@@ -59,4 +58,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0d93785046e064589bc5d98e4c7d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arenaName: SampleScene
+  arenaName: MainArena

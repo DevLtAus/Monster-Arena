@@ -14,14 +14,12 @@ public class CameraMovement : MonoBehaviour
     // (Lucas) once the arena has a background. Will give background a box collider
     // (Lucas) that will then be used to get min and max bounds to use to clamp the
     // (Lucas) camera position.
-    /*
     [SerializeField] private BoxCollider2D arenaBounds;
     private Vector2 boundsMin;
     private Vector2 boundsMax;
     private float camY, camX;
     private float camOrthSize;
     private float camRatio;
-    */
 
     // (Lucas) How much the camera gets pushed around by movement and mouse position.
     // (Lucas) Seperate values since the movement will push first and, ideally, push
@@ -62,7 +60,7 @@ public class CameraMovement : MonoBehaviour
     private Vector3 mpDir;
     private bool mRight;
     private bool mUp;
-    [SerializeField] private Vector2 mModifier; // (Lucas) 1, 1
+    //[SerializeField] private Vector2 mModifier; // (Lucas) 1, 1
 
     // Start is called before the first frame update
     void Start()
@@ -71,13 +69,13 @@ public class CameraMovement : MonoBehaviour
         transform.position = playerTrans.position + camOffsetDefault;
         aerial = movPlayer.Aerial;
 
+        arenaBounds = GameObject.Find("Background").GetComponent<BoxCollider2D>();
+
         // (Lucas) Stuff for camera bounds.
-        /*
         boundsMin = new Vector2(arenaBounds.bounds.min.x, arenaBounds.bounds.min.y);
         boundsMax = new Vector2(arenaBounds.bounds.max.x, arenaBounds.bounds.max.y);
         camOrthSize = cam.orthographicSize;
         camRatio = (boundsMax.x + camOrthSize) / 2.0f;
-        */
     }
 
     void FixedUpdate()
@@ -151,17 +149,15 @@ public class CameraMovement : MonoBehaviour
         mpDir = mousePos / mpDistance;
 
         // (Lucas) Setting targetPos. Will comment out when camera bounds is in.
-        targetPos = new Vector3(playerTrans.position.x + camOffset.x + (mpDir.x * mouseInfluence.x),
-            playerTrans.position.y + camOffset.y + (mpDir.y * mouseInfluence.y), this.transform.position.z);
+        //targetPos = new Vector3(playerTrans.position.x + camOffset.x + (mpDir.x * mouseInfluence.x),
+            //playerTrans.position.y + camOffset.y + (mpDir.y * mouseInfluence.y), this.transform.position.z);
 
         // (Lucas) Clamping to camera bounds
-        /*
-        camY = Mathf.Clamp(playerTrans.position.y + camOffset.y,
+        camY = Mathf.Clamp(playerTrans.position.y + camOffset.y + (mpDir.y * mouseInfluence.y),
             boundsMin.y + camOrthSize, boundsMax.y - camOrthSize);
-        camX = Mathf.Clamp(playerTrans.position.x + camOffset.x,
+        camX = Mathf.Clamp(playerTrans.position.x + camOffset.x + (mpDir.x * mouseInfluence.x),
             boundsMin.x + camOrthSize, boundsMax.x - camOrthSize);
         targetPos = new Vector3(camX, camY, this.transform.position.z);
-        */
 
         
         Vector3 lerpPos = Vector3.Lerp(transform.position, targetPos, camSpeed * Time.deltaTime);
