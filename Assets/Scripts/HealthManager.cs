@@ -10,10 +10,9 @@ public class HealthManager : MonoBehaviour
     private SceneChanger sceneChanger;
 
     // (Lucas) Boss health
-    private int bHealth;
-    public int bossMaxHealth;
+    private float bHealth;
 
-    public void DamageBoss(int damage)
+    public void DamageBoss(float damage)
     {
         bHealth -= damage;
         if (bHealth <= 0) {
@@ -23,7 +22,7 @@ public class HealthManager : MonoBehaviour
         }
     }
 
-    public void SetBossHealth(int hp)
+    public void SetBossHealth(float hp)
     {
         bHealth = hp;
     }
@@ -49,7 +48,6 @@ public class HealthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bHealth = bossMaxHealth;
         pHealth = playerMaxHealth;
         sceneChanger = gameObject.GetComponent<SceneChanger>();
     }

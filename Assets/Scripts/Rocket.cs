@@ -12,26 +12,14 @@ public class Rocket : MonoBehaviour
     private float angle;
     public float angleProp
     {
-        get
-        {
-            return angle;
-        }
-        set
-        {
-            angle = value;
-        }
+        get { return angle; }
+        set { angle = value; }
     }
     private float speed;
     public float speedProp
     {
-        get
-        {
-            return speed;
-        }
-        set
-        {
-            speed = value;
-        }
+        get { return speed; }
+        set { speed = value; }
     }
     //(Elliot) public variables for radius of impact and force for which to affect repelling the player
     public float fieldOfImpact;
@@ -64,6 +52,11 @@ public class Rocket : MonoBehaviour
                 //(Elliot) Formula for calculating force to repel given how close the player is to the rocket
                 //e.g if distance = basically nothing, the full force will be applied. If the distance is barely within the FOI, only a small fraction of the force will result.
                 force -= distance / fieldOfImpact * force;
+                //(Elliot) Temporary threshold for providing appropriate rocket elevation feedback, as requested by play-testers
+                if (!movePlayer.Aerial)
+                {
+                    force *= 3;
+                }
 
                 Vector2 direction = player.transform.position - transform.position;
                 //(Elliot) Applying the force to player
@@ -75,7 +68,7 @@ public class Rocket : MonoBehaviour
             if (col.gameObject.tag == "Weak")
             {
                 WeakSpot ws = col.GetComponent<WeakSpot>();
-                ws.Damage();
+                ws.Damage(1); //(Elliot) Temporary rocket damage
             }
             //(Elliot) Create explosion effect and Destroy rocket on impact with anything but the player
             GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
