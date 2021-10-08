@@ -63,4 +63,9 @@ public class HealthManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void Update() {
+        //Debug.Log(pHealth);     // (Lucas) Uncomment to test changes in player health.
+        //Debug.Log(bHealth); // (Lucas) Uncomment to test changes in boss health.
+    }
 }
