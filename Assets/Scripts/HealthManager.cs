@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
     // (Lucas) Singleton stuff
     public static HealthManager instance;
+    public Slider bossSlider;
 
     private SceneChanger sceneChanger;
 
@@ -20,11 +22,14 @@ public class HealthManager : MonoBehaviour
             // (Lucas) Will uncomment once win screen is implemented.
             //sceneChanger.Win();
         }
+        bossSlider.value = bHealth;
     }
 
     public void SetBossHealth(float hp)
     {
-        bHealth = hp;
+        bHealth = hp; 
+        
+        bossSlider.maxValue = bHealth;
     }
 
     // (Lucas) Player health
