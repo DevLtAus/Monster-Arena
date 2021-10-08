@@ -7481,10 +7481,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
-      propertyPath: bossSlider
-      value: 
-      objectReference: {fileID: 1697857619}
     - target: {fileID: 9176974047772737929, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_Name
       value: Game Manager

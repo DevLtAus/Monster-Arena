@@ -44,6 +44,6 @@ public class BossHealth : MonoBehaviour
             health = healthCheck;   
         }
 
-        Debug.Log(health); //Uncomment to see how boss health changes as damage is done to the weak spots
+        //Debug.Log(health); //Uncomment to see how boss health changes as damage is done to the weak spots
     }
 }
