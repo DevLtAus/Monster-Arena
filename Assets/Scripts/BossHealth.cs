@@ -24,6 +24,7 @@ public class BossHealth : MonoBehaviour
         }
     
         hm.SetBossHealth(health);
+        Debug.Log(health);
     }
 
     // Update is called once per frame

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class HealthManager : MonoBehaviour
 
     // (Lucas) Boss health
     private float bHealth;
+    public Slider bossSlider;
 
     public void DamageBoss(float damage)
     {
@@ -25,6 +27,7 @@ public class HealthManager : MonoBehaviour
     public void SetBossHealth(float hp)
     {
         bHealth = hp;
+        bossSlider.maxValue = bHealth;
     }
 
     // (Lucas) Player health
