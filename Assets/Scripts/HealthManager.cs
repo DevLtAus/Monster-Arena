@@ -22,12 +22,14 @@ public class HealthManager : MonoBehaviour
             // (Lucas) Will uncomment once win screen is implemented.
             //sceneChanger.Win();
         }
+        bossSlider.value = bHealth;
     }
 
     public void SetBossHealth(float hp)
     {
         bHealth = hp;
         bossSlider.maxValue = bHealth;
+        bossSlider.value = bHealth;
     }
 
     // (Lucas) Player health
