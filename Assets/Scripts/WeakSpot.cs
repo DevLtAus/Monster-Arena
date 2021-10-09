@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeakSpot : MonoBehaviour
 {
     //(Elliot) health is public variable with value of 1 by default
     public int health = 1;
+    Slider wSlider;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        wSlider = GetComponentInChildren<Slider>();
+        wSlider.maxValue = health;
+        wSlider.value = health;
     }
 
     // Update is called once per frame
@@ -27,5 +32,6 @@ public class WeakSpot : MonoBehaviour
             health = 0;
             gameObject.SetActive(false);
         }
+        wSlider.value = health;
     }
 }
