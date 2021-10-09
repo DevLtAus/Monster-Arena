@@ -12,43 +12,7 @@ public class HealthManager : MonoBehaviour
 
     // (Lucas) Boss health
     private float bHealth;
-    public Slider bossSlider;
-
-    public void DamageBoss(float damage)
-    {
-        bHealth -= damage;
-        if (bHealth <= 0) {
-            bHealth = 0;
-            // (Lucas) Will uncomment once win screen is implemented.
-            //sceneChanger.Win();
-        }
-        bossSlider.value = bHealth;
-    }
-
-    public void SetBossHealth(float hp)
-    {
-        bHealth = hp;
-        bossSlider.maxValue = bHealth;
-        bossSlider.value = bHealth;
-    }
-
-    // (Lucas) Player health
-    public int pHealth;
-    public int playerMaxHealth;
-
-    public void DamagePlayer(int damage)
-    {
-        pHealth -= damage;
-        if (pHealth <= 0) {
-            pHealth = 0;
-            sceneChanger.Lose();
-        }
-    }
-
-    public void SetPlayerHealth(int hp)
-    {
-        pHealth = hp;
-    }
+    Slider bSlider;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +23,8 @@ public class HealthManager : MonoBehaviour
 
     void Awake()
     {
+        bSlider = GetComponentInChildren<Slider>();
+        
         DontDestroyOnLoad(gameObject);
 
         if(instance == null) {
@@ -68,4 +34,53 @@ public class HealthManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    // (Elliot) Damage the boss and initiate win condition when boss health reaches 0
+    public void DamageBoss(float damage)
+    {
+        bHealth -= damage;
+        if (bHealth <= 0) {
+            bHealth = 0;
+            // (Lucas) Will uncomment once win screen is implemented.
+            //sceneChanger.Win();
+        }
+        bSlider.value = bHealth;
+    }
+
+    // (Elliot) Set boss' health and assign it to the health bar, filled
+    public void SetBossHealth(float hp)
+    {
+        bHealth = hp;
+        bSlider.maxValue = bHealth;
+        bSlider.value = bHealth;
+    }
+
+    // (Lucas) Player health
+    public int pHealth;
+    public int playerMaxHealth;
+    Slider pSlider;
+
+    public void DamagePlayer(int damage)
+    {
+        pHealth -= damage;
+        if (pHealth <= 0) {
+            pHealth = 0;
+            sceneChanger.Lose();
+        }
+        pSlider.value = pHealth;
+    }
+
+    public void SetPlayerHealth(int hp)
+    {
+        pHealth = hp;
+        playerMaxHealth = hp;
+        pSlider.maxValue = pHealth;
+        pSlider.value = pHealth;
+    }
+
+    public void Update()
+    {
+
+    }
+
 }
