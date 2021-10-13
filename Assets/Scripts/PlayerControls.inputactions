@@ -23,19 +23,19 @@
                 },
                 {
                     "name": "Movement",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "cf6a4c12-92ef-4149-829f-dd2de5379ad7",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 },
                 {
                     "name": "Jump",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "c9a80697-03f0-4fe1-bcce-8c127514082b",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -96,8 +96,8 @@
                 },
                 {
                     "name": "Sideways",
-                    "id": "8b75f464-bdc7-4a56-9097-aa530ce11e1e",
-                    "path": "1DAxis",
+                    "id": "8b758cca-a075-4f0f-bdbd-62a93890ce25",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -106,8 +106,30 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "8d96b99e-1ec0-4000-b579-a562b49ca8d5",
+                    "name": "up",
+                    "id": "968c7b34-fd52-4d44-99ad-bf219b71b5f3",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "88666dca-454a-49e7-b409-a7d9ac31ceb5",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "cd1b74ff-65f7-49b1-ae0b-8a4f22a3a78e",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -117,8 +139,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
-                    "id": "3a8a6e6a-7014-479a-92a2-e994da13a6ee",
+                    "name": "right",
+                    "id": "20835b15-8286-4aba-931d-f954073fd4fb",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -129,8 +151,8 @@
                 },
                 {
                     "name": "Sideways gamepad",
-                    "id": "96bd6b89-fcb9-4a1f-8888-2ffbbcab904f",
-                    "path": "1DAxis",
+                    "id": "791b4eb4-6d4e-46ca-941e-3ab253e01d86",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -139,23 +161,45 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "f6f0473f-2bc9-4ad8-b2af-9738619aaa7b",
-                    "path": "<Gamepad>/leftStick/left",
+                    "name": "up",
+                    "id": "8c563053-bff3-4da6-82df-206dd252ac58",
+                    "path": "",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
-                    "id": "043e9e81-c2be-4fe5-980d-c46a5e8521d7",
+                    "name": "down",
+                    "id": "0e3b0ca8-bf5a-4c97-a3f5-8dd7e9116701",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "5c206655-ec0c-45a2-8f43-932cf4ab0298",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "af27d4d2-f5cd-49df-a57b-2728a3679525",
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true

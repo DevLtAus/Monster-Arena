@@ -51,6 +51,8 @@ public class MovePlayer : MonoBehaviour
     public bool pushed = false;
     private bool pushing = false;
 
+    // (Elliot) Boolean to check if jump button is being held down
+    private bool jumpButtonPressed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -59,43 +61,56 @@ public class MovePlayer : MonoBehaviour
         trans = this.gameObject.GetComponent<Transform>();
     }
 
+    // (Elliot) Get horizontal input and store it.
+    public void SetHorizontalInput(float hi)
+    {
+        horizontalInput = hi;
+    }
+
+    // (Elliot) Get jump input and store it.
+    public void SetJumpInput(bool ji)
+    {
+        jumpButtonPressed = ji;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        // (Lucas) Get horizontal input and store it.
-        horizontalInput = Input.GetAxis("Horizontal");
-        // (Lucas) Check if the player wants to jump.
-        if (Input.GetButtonDown("Jump")) {
-            switch(aerial) {
-                case true:
-                    switch(canAirJump) {
-                        case false:
-                            // (Lucas) In the air and can't jump but can start buffering the next jump in case the player was a couple frames early.
-                            jumpBufferTimer = jumpBuffer;
-                            buffering = true;
-                            break;
-                        case true:
-                            switch(jumped) {
-                                case true:
-                                    break;
-                                case false:
-                                    jumped = true;
-                                    break;
-                            }
-                            break;
-                    }
-                    break;
-                case false:
-                    // (Lucas) On the ground, can jump.
-                    switch(jumped) {
-                        case true:
-                            break;
-                        case false:
-                            jumped = true;
-                            break;
-                    }
-                    break;
-            }
+        
+    }
+
+    // (Lucas) Check if the player wants to jump.
+    public void JumpButtonDown()
+    {
+        switch(aerial) {
+            case true:
+                switch(canAirJump) {
+                    case false:
+                        // (Lucas) In the air and can't jump but can start buffering the next jump in case the player was a couple frames early.
+                        jumpBufferTimer = jumpBuffer;
+                        buffering = true;
+                        break;
+                    case true:
+                        switch(jumped) {
+                            case true:
+                                break;
+                            case false:
+                                jumped = true;
+                                break;
+                        }
+                        break;
+                }
+                break;
+            case false:
+                // (Lucas) On the ground, can jump.
+                switch(jumped) {
+                    case true:
+                        break;
+                    case false:
+                        jumped = true;
+                        break;
+                }
+                break;
         }
     }
 
@@ -139,7 +154,7 @@ public class MovePlayer : MonoBehaviour
                 if (apexBufferNeg <= body.velocity.y && body.velocity.y <= apexBufferPos) {
                     body.gravityScale = apexGrav;
                 }
-                else if (body.velocity.y < apexBufferNeg || (body.velocity.y > apexBufferPos && !Input.GetButton("Jump"))) {
+                else if ((body.velocity.y < apexBufferNeg) || (body.velocity.y > apexBufferPos && !jumpButtonPressed)) {
                     body.gravityScale = fallGrav;
                 }
                 else {
