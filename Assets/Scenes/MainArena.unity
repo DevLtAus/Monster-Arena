@@ -795,6 +795,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5921651602127476358, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 33.43
+      objectReference: {fileID: 0}
     - target: {fileID: 5921651602678617362, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
       propertyPath: m_Name
       value: World
@@ -842,6 +846,14 @@ PrefabInstance:
     - target: {fileID: 5921651602678617363, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921651602851066582, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 33.4132
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921651603462761208, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 33.4132
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
