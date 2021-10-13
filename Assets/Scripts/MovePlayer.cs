@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
+
     private Rigidbody2D body;
     private Transform trans;
     [SerializeField] private float horizontalInput = 0f;
@@ -49,7 +50,6 @@ public class MovePlayer : MonoBehaviour
     // (Lucas) Making pushed public since it is entirely for detecting if the player is being pushed by something else.
     public bool pushed = false;
     private bool pushing = false;
-
 
 
     // Start is called before the first frame update
