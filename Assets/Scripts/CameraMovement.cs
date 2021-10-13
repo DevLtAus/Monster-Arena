@@ -78,6 +78,12 @@ public class CameraMovement : MonoBehaviour
         camRatio = (boundsMax.x + camOrthSize) / 2.0f;
     }
 
+    // (Elliot) Set the Mouse's influence on the camera
+    public void SetMouseInput(Vector3 mi)
+    {
+        mousePos = mi;
+    }
+
     void FixedUpdate()
     {
         aerial = movPlayer.Aerial;
@@ -138,15 +144,12 @@ public class CameraMovement : MonoBehaviour
             camOffset.x *= -1;
         }
 
-        // (Lucas) Mouse's influence on the camera
-        mousePos = Input.mousePosition;
-
         // (Lucas) Get mouse position relative to player position
         playerPos = Camera.main.WorldToScreenPoint(playerTrans.position);
-        mousePos.x = (mousePos.x - playerPos.x);
-        mousePos.y = (mousePos.y - playerPos.y);
-        mpDistance = mousePos.magnitude;
-        mpDir = mousePos / mpDistance;
+        
+        Vector3 target = mousePos - playerPos;
+        mpDistance = target.magnitude;
+        mpDir = target / mpDistance;
 
         // (Lucas) Setting targetPos. Will comment out when camera bounds is in.
         //targetPos = new Vector3(playerTrans.position.x + camOffset.x + (mpDir.x * mouseInfluence.x),

@@ -28,18 +28,23 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //(Elliot) Collect mouse and object positions based on screen space
-        mousePos = Input.mousePosition;
-        objectPos = Camera.main.WorldToScreenPoint(trans.position);
-        mousePos.x = mousePos.x - objectPos.x;
-        mousePos.y = mousePos.y - objectPos.y;
-        //(Elliot) Converts comparison to degrees and rotates the object around the z axis
-        angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-
-        //(Elliot) Instantiates a rocket in the direction of the mouse cursor when the mouse is clicked
         curCooldown -= Time.deltaTime;
-        if (Input.GetButtonDown("Fire1") && curCooldown <= 0) {
+    }
+
+    public void Aim(Vector3 mousePos)
+    {
+        //(Elliot) Collect mouse and object positions based on screen space
+        objectPos = Camera.main.WorldToScreenPoint(trans.position);
+        Vector3 target = mousePos - transform.position;
+        //(Elliot) Converts comparison to degrees and rotates the object around the z axis
+        angle = Mathf.Atan2(target.y, target.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+    }
+
+    //(Elliot) Instantiates a rocket in the direction of the mouse cursor when the mouse is clicked
+    public void Shoot()
+    {
+        if (curCooldown <= 0) {
             curCooldown = cooldown;
             Rocket rocket = Instantiate(rocketPrefab);
             rocket.transform.position = transform.position;
