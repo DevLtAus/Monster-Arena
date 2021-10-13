@@ -40,8 +40,9 @@ public class Controls : MonoBehaviour
         Vector2 mousePosition = controls.Player.MousePosition.ReadValue<Vector2>();
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
         weapon.Aim(mouseWorldPosition);
+        
         //Camera movement
-        cam.SetMouseInput(mouseWorldPosition);
+        cam.SetMouseInput(new Vector3(mousePosition.x, mousePosition.y, 0));
 
         //Player Movement
         Vector3 movement = controls.Player.Movement.ReadValue<Vector2>();

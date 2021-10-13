@@ -144,20 +144,12 @@ public class CameraMovement : MonoBehaviour
             camOffset.x *= -1;
         }
 
-        // (Lucas) Mouse's influence on the camera
-        //mousePos = Input.mousePosition;
-
         // (Lucas) Get mouse position relative to player position
         playerPos = Camera.main.WorldToScreenPoint(playerTrans.position);
-        // mousePos.x = (mousePos.x - playerPos.x);
-        // mousePos.y = (mousePos.y - playerPos.y);
         
         Vector3 target = mousePos - playerPos;
         mpDistance = target.magnitude;
         mpDir = target / mpDistance;
-        // Debug.Log(target);
-        // Debug.Log(mpDistance);
-        // Debug.Log(mpDir);
 
         // (Lucas) Setting targetPos. Will comment out when camera bounds is in.
         //targetPos = new Vector3(playerTrans.position.x + camOffset.x + (mpDir.x * mouseInfluence.x),
