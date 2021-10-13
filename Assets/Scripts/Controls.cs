@@ -7,6 +7,7 @@ public class Controls : MonoBehaviour
     private PlayerControls controls;
     Weapon weapon;
     MovePlayer player;
+    CameraMovement cam;
 
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class Controls : MonoBehaviour
     {
         weapon = GetComponentInChildren<Weapon>();
         player = this.GetComponent<MovePlayer>();
+        cam = GetComponentInChildren<CameraMovement>();
 
         //Shooting
         controls.Player.Shoot.performed += _ => weapon.Shoot();
@@ -38,6 +40,8 @@ public class Controls : MonoBehaviour
         Vector2 mousePosition = controls.Player.MousePosition.ReadValue<Vector2>();
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
         weapon.Aim(mouseWorldPosition);
+        //Camera movement
+        cam.SetMouseInput(mouseWorldPosition);
 
         //Player Movement
         Vector3 movement = controls.Player.Movement.ReadValue<Vector2>();

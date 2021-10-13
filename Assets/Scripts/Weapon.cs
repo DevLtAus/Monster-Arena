@@ -31,11 +31,11 @@ public class Weapon : MonoBehaviour
         curCooldown -= Time.deltaTime;
     }
 
-    public void Aim(Vector3 mousePosi)
+    public void Aim(Vector3 mousePos)
     {
         //(Elliot) Collect mouse and object positions based on screen space
         objectPos = Camera.main.WorldToScreenPoint(trans.position);
-        Vector3 target = mousePosi - transform.position;
+        Vector3 target = mousePos - transform.position;
         //(Elliot) Converts comparison to degrees and rotates the object around the z axis
         angle = Mathf.Atan2(target.y, target.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
