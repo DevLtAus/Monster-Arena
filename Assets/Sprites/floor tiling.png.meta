@@ -1,7 +1,16 @@
 fileFormatVersion: 2
 guid: 7076617137b16de4b9f5ab43a690f1a4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8805562854184092497
+    second: floor tiling_0
+  - first:
+      213: -6582442183856503427
+    second: floor tiling_1
+  - first:
+      213: 5202906154717674686
+    second: floor tiling_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -43,10 +52,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,7 +134,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: floor tiling_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 470.33334
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153840313c4a33a70800000000000000
+      internalID: 8805562854184092497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor tiling_1
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 0
+        width: 470.33334
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75cfa485b776a4a0800000000000000
+      internalID: -6582442183856503427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor tiling_2
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 0
+        width: 470.33334
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebcf3afd49f643840800000000000000
+      internalID: 5202906154717674686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
