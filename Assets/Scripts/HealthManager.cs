@@ -14,16 +14,6 @@ public class HealthManager : MonoBehaviour
     private float bHealth;
     Slider bSlider;
 
-    // (Lucas) Player health
-    public int pHealth;
-    public int playerMaxHealth;
-    Slider pSlider;
-    
-    // (Lucas) Player invulnerability
-    public float playerIFrames;
-    private float playerIFrameTimer = 0;
-    public bool playerInvuln = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -33,10 +23,8 @@ public class HealthManager : MonoBehaviour
 
     void Awake()
     {
-        //bSlider = GetComponentInChildren<Slider>();
-        //pSlider = GetComponentInChildren<Slider>();
-        bSlider = GameObject.Find("BossHealth").GetComponent<Slider>();
-        pSlider = GameObject.Find("PlayerHealth").GetComponent<Slider>();
+        GameObject bossHealth = GameObject.Find("BossHealth");
+        bSlider = bossHealth.GetComponentInChildren<Slider>();
         
         DontDestroyOnLoad(gameObject);
 
@@ -54,8 +42,8 @@ public class HealthManager : MonoBehaviour
         bHealth -= damage;
         if (bHealth <= 0) {
             bHealth = 0;
-            // (Lucas) Go to the win screen.
-            sceneChanger.Win();
+            // (Lucas) Will uncomment once win screen is implemented.
+            //sceneChanger.Win();
         }
         bSlider.value = bHealth;
     }
@@ -68,25 +56,19 @@ public class HealthManager : MonoBehaviour
         bSlider.value = bHealth;
     }
 
+    // (Lucas) Player health
+    public int pHealth;
+    public int playerMaxHealth;
+    Slider pSlider;
+
     public void DamagePlayer(int damage)
     {
-        switch(playerInvuln) {
-            case false:
-                pHealth -= damage;
-                if (pHealth <= 0) {
-                    pHealth = 0;
-                    // (Lucas) Go to the game over screen.
-                    sceneChanger.Lose();
-                }
-                pSlider.value = pHealth;
-                playerIFrameTimer = playerIFrames;
-                playerInvuln = true;
-                break;
-            case true:
-                // (Lucas) Player is invulnerable.
-                //Debug.Log("Player was hit while invulnerable");
-                break;
+        pHealth -= damage;
+        if (pHealth <= 0) {
+            pHealth = 0;
+            sceneChanger.Lose();
         }
+        pSlider.value = pHealth;
     }
 
     public void SetPlayerHealth(int hp)
@@ -97,13 +79,9 @@ public class HealthManager : MonoBehaviour
         pSlider.value = pHealth;
     }
 
-    void FixedUpdate()
+    public void Update()
     {
-        if (playerIFrameTimer > 0) {
-            playerIFrameTimer -= 1;
-        }
-        else {
-            playerInvuln = false;
-        }
+
     }
+
 }
