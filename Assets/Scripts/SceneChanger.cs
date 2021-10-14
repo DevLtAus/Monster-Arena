@@ -11,6 +11,9 @@ public class SceneChanger : MonoBehaviour
 
     // (Lucas) the name of the arena's scene.
     public string arenaName;
+    // (Lucas) the name of the win and lose screens' scene.
+    public string winName;
+    public string loseName;
 
     // (Lucas) Setting up the ability to reload back to a previous part of the fight.
     // (Lucas) Maybe going to store the position and health of the player each time
@@ -36,11 +39,12 @@ public class SceneChanger : MonoBehaviour
 
     public void Lose()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene(loseName);
     }
 
+    // (Lucas) Go to win screen.
     public void Win()
     {
-        // (Lucas) Will complete once win screen is implemented.
+        SceneManager.LoadScene(winName);
     }
 }

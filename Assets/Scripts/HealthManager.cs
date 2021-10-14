@@ -41,8 +41,8 @@ public class HealthManager : MonoBehaviour
         bHealth -= damage;
         if (bHealth <= 0) {
             bHealth = 0;
-            // (Lucas) Will uncomment once win screen is implemented.
-            //sceneChanger.Win();
+            // (Lucas) Go to the win screen.
+            sceneChanger.Win();
         }
         bSlider.value = bHealth;
     }
@@ -77,10 +77,4 @@ public class HealthManager : MonoBehaviour
         pSlider.maxValue = pHealth;
         pSlider.value = pHealth;
     }
-
-    public void Update()
-    {
-
-    }
-
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1748869061357720906}
   - component: {fileID: 1748869061357720909}
   - component: {fileID: 1748869061357720908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -148,7 +148,8 @@ GameObject:
   - component: {fileID: 1748869061815764428}
   - component: {fileID: 1748869061815764426}
   - component: {fileID: 1748869061815764429}
-  m_Layer: 0
+  - component: {fileID: 605212227}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -221,6 +222,18 @@ MonoBehaviour:
   apexBufferNeg: -1
   aerial: 0
   pushed: 0
+--- !u!114 &605212227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748869061815764431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52b9e39e796182488b2579095c044a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1748869062371866586
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +246,7 @@ GameObject:
   - component: {fileID: 1748869062371866585}
   - component: {fileID: 1748869062371866587}
   - component: {fileID: 1748869062371866584}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -320,7 +333,8 @@ MonoBehaviour:
   playerBody: {fileID: 1748869061815764426}
   playerTrans: {fileID: 1748869061357720910}
   movPlayer: {fileID: 1748869061815764429}
-  moveInfluence: {x: 2, y: 2}
+  arenaBounds: {fileID: 0}
+  moveInfluence: {x: 2, y: 0}
   mouseInfluence: {x: 1.5, y: 1.5}
   minMoveVel: {x: 3, y: 18}
   minFastVel: {x: 20, y: 35}
@@ -329,7 +343,6 @@ MonoBehaviour:
   upSpeed: 4
   downSpeed: 4
   camOffsetDefault: {x: 0, y: 0, z: -10}
-  mModifier: {x: 2, y: 1}
 --- !u!1001 &8837338276165499647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -340,6 +353,10 @@ PrefabInstance:
     - target: {fileID: 7125173388526325834, guid: 35471345495a4f743915700bc4d85198, type: 3}
       propertyPath: m_Name
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125173388526325834, guid: 35471345495a4f743915700bc4d85198, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7125173388526325836, guid: 35471345495a4f743915700bc4d85198, type: 3}
       propertyPath: speed
@@ -392,6 +409,14 @@ PrefabInstance:
     - target: {fileID: 7125173388526325837, guid: 35471345495a4f743915700bc4d85198, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125173388843660548, guid: 35471345495a4f743915700bc4d85198, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125173388843660601, guid: 35471345495a4f743915700bc4d85198, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35471345495a4f743915700bc4d85198, type: 3}
