@@ -706,6 +706,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pHealth: 3
   playerMaxHealth: 3
+  playerIFrames: 50
+  playerInvuln: 0
 --- !u!114 &1075251056678910863
 MonoBehaviour:
   m_ObjectHideFlags: 0

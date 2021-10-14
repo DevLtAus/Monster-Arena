@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 1748869061815764426}
   - component: {fileID: 1748869061815764429}
   - component: {fileID: 605212227}
+  - component: {fileID: 605212231}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -211,7 +212,7 @@ MonoBehaviour:
   maxRocketSpeed: 20
   jumpSpeed: 23
   jumpBuffer: 7
-  fallBuffer: 2
+  fallBuffer: 5
   apexGrav: 3
   riseGrav: 4
   fallGrav: 13
@@ -232,6 +233,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f52b9e39e796182488b2579095c044a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &605212231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748869061815764431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd20800e17fee942b3d77ff4f23de10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1748869062371866586

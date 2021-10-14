@@ -14,6 +14,16 @@ public class HealthManager : MonoBehaviour
     private float bHealth;
     Slider bSlider;
 
+    // (Lucas) Player health
+    public int pHealth;
+    public int playerMaxHealth;
+    Slider pSlider;
+    
+    // (Lucas) Player invulnerability
+    public float playerIFrames;
+    private float playerIFrameTimer = 0;
+    public bool playerInvuln = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +33,10 @@ public class HealthManager : MonoBehaviour
 
     void Awake()
     {
-        bSlider = GetComponentInChildren<Slider>();
+        //bSlider = GetComponentInChildren<Slider>();
+        //pSlider = GetComponentInChildren<Slider>();
+        bSlider = GameObject.Find("BossHealth").GetComponent<Slider>();
+        pSlider = GameObject.Find("PlayerHealth").GetComponent<Slider>();
         
         DontDestroyOnLoad(gameObject);
 
@@ -55,19 +68,25 @@ public class HealthManager : MonoBehaviour
         bSlider.value = bHealth;
     }
 
-    // (Lucas) Player health
-    public int pHealth;
-    public int playerMaxHealth;
-    Slider pSlider;
-
     public void DamagePlayer(int damage)
     {
-        pHealth -= damage;
-        if (pHealth <= 0) {
-            pHealth = 0;
-            sceneChanger.Lose();
+        switch(playerInvuln) {
+            case false:
+                pHealth -= damage;
+                if (pHealth <= 0) {
+                    pHealth = 0;
+                    // (Lucas) Go to the game over screen.
+                    sceneChanger.Lose();
+                }
+                pSlider.value = pHealth;
+                playerIFrameTimer = playerIFrames;
+                playerInvuln = true;
+                break;
+            case true:
+                // (Lucas) Player is invulnerable.
+                //Debug.Log("Player was hit while invulnerable");
+                break;
         }
-        pSlider.value = pHealth;
     }
 
     public void SetPlayerHealth(int hp)
@@ -76,5 +95,15 @@ public class HealthManager : MonoBehaviour
         playerMaxHealth = hp;
         pSlider.maxValue = pHealth;
         pSlider.value = pHealth;
+    }
+
+    void FixedUpdate()
+    {
+        if (playerIFrameTimer > 0) {
+            playerIFrameTimer -= 1;
+        }
+        else {
+            playerInvuln = false;
+        }
     }
 }
