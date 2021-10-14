@@ -23,7 +23,8 @@ public class HealthManager : MonoBehaviour
 
     void Awake()
     {
-        bSlider = GetComponentInChildren<Slider>();
+        GameObject bossHealth = GameObject.Find("BossHealth");
+        bSlider = bossHealth.GetComponentInChildren<Slider>();
         
         DontDestroyOnLoad(gameObject);
 
