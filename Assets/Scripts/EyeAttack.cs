@@ -92,7 +92,7 @@ public class EyeAttack : MonoBehaviour
                 line.endColor = warnEnd;
                 line.startColor = warnStart;
             }
-            else if (hit.transform.gameObject.tag == "Player" && firing) {
+            else if (hit.transform.gameObject.tag == "Player" && firing && attackAllowed) {
                 hManager.DamagePlayer(damage);
             }
 
