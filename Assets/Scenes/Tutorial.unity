@@ -485,7 +485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 132949356}
   - component: {fileID: 132949357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Isometric Diamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -849,7 +849,7 @@ GameObject:
   - component: {fileID: 383693216}
   - component: {fileID: 383693215}
   - component: {fileID: 383693218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -952,6 +952,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea11ecc446bc9c44f9d4142dab2125f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetScene: MainMenu
+  spinSpeed: 3
+  axis: {x: 0, y: 0, z: 1}
 --- !u!1 &421548399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,7 +1797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 923655776}
   - component: {fileID: 923655777}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Isometric Diamond (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2490,7 +2493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1658189145}
   - component: {fileID: 1658189146}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Isometric Diamond (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

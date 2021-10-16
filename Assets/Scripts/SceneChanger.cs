@@ -11,6 +11,9 @@ public class SceneChanger : MonoBehaviour
 
     // (Lucas) the name of the arena's scene.
     public string arenaName;
+    // (Lucas) the name of the tutorial's scene.
+    public string tutorialName;
+
     // (Lucas) the name of the win and lose screens' scene.
     public string winName;
     public string loseName;
@@ -35,6 +38,11 @@ public class SceneChanger : MonoBehaviour
     public void ArenaFromQuickSave()
     {
         // (Lucas) Will complete once weak spot health is implemented.
+    }
+
+    public void TutorialLevel()
+    {
+        SceneManager.LoadScene(tutorialName);
     }
 
     public void Lose()
