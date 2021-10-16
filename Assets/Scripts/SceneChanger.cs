@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class SceneChanger : MonoBehaviour
 {
-    // (Lucas) curScene is just the number of the scene in the build settings.
-    // (Lucas) number correlations will probably change as scenes are added.
-    private int curScene;
+    // (Lucas) The current scene
+    private Scene curScene;
 
     // (Lucas) the name of the arena's scene.
     public string arenaName;
@@ -54,5 +54,26 @@ public class SceneChanger : MonoBehaviour
     public void Win()
     {
         SceneManager.LoadScene(winName);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (hm == null) {
+            hm = gameObject.GetComponent<HealthManager>();
+        }
+        curScene = SceneManager.GetActiveScene();
+
+        if (curScene.name == arenaName) {
+            hm.bSlider.gameObject.SetActive(true);
+        }
+        else {
+            try {
+                hm.bSlider.gameObject.SetActive(false);
+            }
+            catch (NullReferenceException ex) {
+                //Debug.Log("Boss health slider is already inactive");
+            }
+        }
     }
 }

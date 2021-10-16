@@ -704,6 +704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2320d84c132beb44199f1003552a35c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bSlider: {fileID: 0}
   pHealth: 3
   playerMaxHealth: 3
   playerIFrames: 50
@@ -721,5 +722,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arenaName: MainArena
+  tutorialName: Tutorial
   winName: Victory
   loseName: GameOver
