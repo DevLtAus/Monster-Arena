@@ -12,7 +12,7 @@ public class HealthManager : MonoBehaviour
 
     // (Lucas) Boss health
     private float bHealth;
-    Slider bSlider;
+    public Slider bSlider;
 
     // (Lucas) Player health
     public int pHealth;

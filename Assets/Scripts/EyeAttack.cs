@@ -66,7 +66,6 @@ public class EyeAttack : MonoBehaviour
         norm[1] = new Vector3(0, 0, 0);
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         // (Lucas) Where to aim and how far away the player is.
