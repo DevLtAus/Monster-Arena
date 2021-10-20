@@ -64,16 +64,13 @@ public class SceneChanger : MonoBehaviour
         }
         curScene = SceneManager.GetActiveScene();
 
-        // if (curScene.name == arenaName) {
-        //     hm.BSlider.gameObject.SetActive(true);
-        // }
-        // else {
-        //     try {
-        //         hm.BSlider.gameObject.SetActive(false);
-        //     }
-        //     catch (NullReferenceException ex) {
-        //         //Debug.Log("Boss health slider is already inactive");
-        //     }
-        // }
+        if (curScene.name != arenaName) {
+            try {
+                hm.BSlider.gameObject.SetActive(false);
+            }
+            catch (NullReferenceException ex) {
+                //Debug.Log("Boss health slider is already inactive");
+            }
+        }
     }
 }

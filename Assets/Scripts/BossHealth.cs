@@ -12,6 +12,8 @@ public class BossHealth : MonoBehaviour
     private HealthManager hm;
     private float health = 0;
     private bool activatable = false;
+
+    //(Elliot) Boolean variable to check if boss has been activated
     private bool activated = true;
 
     // Start is called before the first frame update

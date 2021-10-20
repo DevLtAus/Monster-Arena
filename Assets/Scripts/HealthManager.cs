@@ -56,6 +56,7 @@ public class HealthManager : MonoBehaviour
         }
     }
 
+    // (Elliot) Activate Boss health manager
     public void ActivateBoss(string name)
     {
         bName.text = name;
