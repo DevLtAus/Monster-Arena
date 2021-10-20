@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 145839680756708737, guid: c9438daa52794054c9fa07787d572843, type: 3}
   fieldOfImpact: 5
-  force: 800
+  force: 600
 --- !u!61 &2025694733845991284
 BoxCollider2D:
   m_ObjectHideFlags: 0
