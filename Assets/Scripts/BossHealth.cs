@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossHealth : MonoBehaviour
 {
+    public string bossName;
     //(Elliot) Array of Weakspot game objects added from scene
     public GameObject[] weakSpots;
     //(Elliot) Collects game manager object and components
@@ -24,6 +25,7 @@ public class BossHealth : MonoBehaviour
         }
     
         hm.SetBossHealth(health);
+        hm.SetBossName(bossName);
     }
 
     // Update is called once per frame
