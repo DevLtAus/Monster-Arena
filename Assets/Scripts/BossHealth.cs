@@ -11,7 +11,9 @@ public class BossHealth : MonoBehaviour
     private GameObject gm;
     private HealthManager hm;
     private float health = 0;
-    private float healthCheck;
+    private bool activatable = false;
+    private bool activated = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,30 +24,61 @@ public class BossHealth : MonoBehaviour
         {
             WeakSpot ws = weakSpots[i].GetComponent<WeakSpot>();
             health += ws.health;
+
+            if (ws.canActivateBoss) {
+                activatable = true;
+                activated = false;
+            }
+        }
+
+        //(Elliot) Deactivates all weakspots at the start except the ones that are required to activate the boss
+        if (activatable) {
+            foreach (GameObject i in weakSpots)
+            {
+                WeakSpot ws = i.GetComponent<WeakSpot>();
+                if (!ws.canActivateBoss) {
+                    ws.IsActive = false;
+                }
+            }
         }
     
         hm.SetBossHealth(health);
-        hm.ActivateBoss(bossName);
     }
 
     // Update is called once per frame
     void Update()
     {
         //(Elliot) Checking if weak spots have been damaged
-        healthCheck = 0;
-        for (int i = 0; i < weakSpots.Length; i++)
+        float healthCheck = 0;
+        foreach (GameObject i in weakSpots)
         {
-            WeakSpot ws = weakSpots[i].GetComponent<WeakSpot>();
+            WeakSpot ws = i.GetComponent<WeakSpot>();
             healthCheck += ws.health;
         }
         
         //(Elliot) Sets new health as damage is done and calls to update Health Manager
         if (healthCheck != health)
         {
+            activated = true;
             hm.DamageBoss(health - healthCheck);
             health = healthCheck;   
         }
 
+        //(Elliot) If the boss is activated, enable the health bar and set all weak spots to active
+        if (activated) {
+            hm.ActivateBoss(bossName);
+            EnableWeakSpots();
+        }
+
         //Debug.Log(health); //Uncomment to see how boss health changes as damage is done to the weak spots
+    }
+
+    void EnableWeakSpots()
+    {
+        foreach (GameObject i in weakSpots)
+        {
+            WeakSpot ws = i.GetComponent<WeakSpot>();
+            ws.IsActive = true;
+        }
     }
 }
