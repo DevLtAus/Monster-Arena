@@ -11,6 +11,7 @@ public class HealthManager : MonoBehaviour
     private SceneChanger sceneChanger;
 
     // (Lucas) Boss health
+    GameObject bossHealthObject;
     Text bName;
     private float bHealth;
     Slider bSlider;
@@ -39,9 +40,11 @@ public class HealthManager : MonoBehaviour
 
     void Awake()
     {
+        bossHealthObject = GameObject.Find("BossHealth");
         bName = GameObject.Find("Name").GetComponent<Text>();
-        bSlider = GameObject.Find("BossHealth").GetComponent<Slider>();
+        bSlider = bossHealthObject.GetComponent<Slider>();
         pSlider = GameObject.Find("PlayerHealth").GetComponent<Slider>();
+        bossHealthObject.SetActive(false);
         
         DontDestroyOnLoad(gameObject);
 
@@ -53,9 +56,10 @@ public class HealthManager : MonoBehaviour
         }
     }
 
-    public void SetBossName(string name)
+    public void ActivateBoss(string name)
     {
         bName.text = name;
+        bossHealthObject.SetActive(true);
     }
 
     // (Elliot) Damage the boss and initiate win condition when boss health reaches 0

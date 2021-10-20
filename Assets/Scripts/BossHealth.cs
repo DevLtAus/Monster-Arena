@@ -25,7 +25,7 @@ public class BossHealth : MonoBehaviour
         }
     
         hm.SetBossHealth(health);
-        hm.SetBossName(bossName);
+        hm.ActivateBoss(bossName);
     }
 
     // Update is called once per frame
