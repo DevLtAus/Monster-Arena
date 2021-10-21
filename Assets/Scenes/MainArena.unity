@@ -387,6 +387,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1748869061290437299, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+      propertyPath: speed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1748869061357720906, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
       propertyPath: m_Color.a
       value: 1
