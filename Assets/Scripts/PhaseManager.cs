@@ -6,10 +6,13 @@ public class PhaseManager : MonoBehaviour
 {
     private GameObject gm;
     private HealthManager hm;
+    private Camera cam;
 
     public string bossName;
     BossHealth boss;
     GameObject[] weakSpots;
+    private float camBossSize;
+    public float cameraSizeIncrease;
 
     // (Elliot) Indicator of current phase represented by integer
     private int phase = 1; // 1 by default
@@ -20,7 +23,7 @@ public class PhaseManager : MonoBehaviour
     }
 
     // (Elliot) Deactivates all weakspots at the start except the ones that are required to activate the boss
-    void Inactive() // Phase 0
+    void Inactive() // PHASE 0
     {
         foreach (GameObject i in weakSpots)
         {
@@ -32,10 +35,14 @@ public class PhaseManager : MonoBehaviour
     }
 
     // (Elliot) If the boss is activated, enable the health bar and set all weak spots to active
-    void Activate() // Phase 1
+    void Activate() // PHASE 1
     {
         hm.ActivateBoss(bossName);
         EnableWeakSpots();
+
+        if (cam.orthographicSize < camBossSize) {
+            cam.orthographicSize += 0.05f;
+        }
     }
 
     // Start is called before the first frame update
@@ -43,6 +50,9 @@ public class PhaseManager : MonoBehaviour
     {
         gm = GameObject.Find("Game Manager");
         hm = gm.GetComponent<HealthManager>();
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+
+        camBossSize = cam.orthographicSize + cameraSizeIncrease;
         boss = this.GetComponent<BossHealth>();
         weakSpots = boss.weakSpots;
     }
