@@ -1422,7 +1422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bbed4536bcc75488c09a6d33515335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossName: Ur Mom of the Boreal Valley
+  bossName: Shar-Lathow'yeb, The Destroyer King
   cameraSizeIncrease: 4
 --- !u!1 &4370261454000431598
 GameObject:
