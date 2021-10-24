@@ -52,29 +52,32 @@ public class Controls : MonoBehaviour
             useController = false;
         }
 
-        if (!useController) {
-            // Weapon rotation
-            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-            weapon.Aim(mouseWorldPosition);
+        switch(useController)
+        {
+            case false:
+                // Weapon rotation
+                Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+                weapon.Aim(mouseWorldPosition);
 
-            // Camera movement
-            cam.SetMouseInput(new Vector3(mousePosition.x, mousePosition.y, 0));
-            
-            prevMouseCoor = mousePosition;
+                // Camera movement
+                cam.SetMouseInput(new Vector3(mousePosition.x, mousePosition.y, 0));
+                
+                prevMouseCoor = mousePosition;
+                break;
+            case true:
+                // Weapon Controller rotation
+                if (stickPosition == new Vector2(0, 0)) {
+                    stickPosition = prevCoor;
+                }
+                Vector3 stickWorldPosition = weapon.transform.position + new Vector3(stickPosition.x, stickPosition.y, 0);
+                weapon.Aim(stickWorldPosition);
+                
+                // Camera Controller movement 
+                Vector3 stickScreenPosition = Camera.main.WorldToScreenPoint(stickWorldPosition);
+                cam.SetMouseInput(stickScreenPosition);
 
-        } else {
-            // Weapon Controller rotation
-            if (stickPosition == new Vector2(0, 0)) {
-                stickPosition = prevCoor;
-            }
-            Vector3 stickWorldPosition = weapon.transform.position + new Vector3(stickPosition.x, stickPosition.y, 0);
-            weapon.Aim(stickWorldPosition);
-            
-            // Camera Controller movement 
-            Vector3 stickScreenPosition = Camera.main.WorldToScreenPoint(stickWorldPosition);
-            cam.SetMouseInput(stickScreenPosition);
-
-            prevCoor = stickPosition;
+                prevCoor = stickPosition;
+                break;
         }
 
         // Player Movement

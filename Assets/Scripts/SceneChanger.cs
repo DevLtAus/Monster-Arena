@@ -64,12 +64,9 @@ public class SceneChanger : MonoBehaviour
         }
         curScene = SceneManager.GetActiveScene();
 
-        if (curScene.name == arenaName) {
-            hm.bSlider.gameObject.SetActive(true);
-        }
-        else {
+        if (curScene.name != arenaName) {
             try {
-                hm.bSlider.gameObject.SetActive(false);
+                hm.BSlider.gameObject.SetActive(false);
             }
             catch (NullReferenceException ex) {
                 //Debug.Log("Boss health slider is already inactive");
