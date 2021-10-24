@@ -114,7 +114,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.18868375
+        value: 0.16980863
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -123,7 +123,7 @@ LineRenderer:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.07547313
+        value: 0.23898631
         inSlope: 0.15707181
         outSlope: 0.15707181
         tangentMode: 0
@@ -838,6 +838,7 @@ GameObject:
   - component: {fileID: 4370261452900674770}
   - component: {fileID: 1166906996}
   - component: {fileID: 1166906999}
+  - component: {fileID: 1166907000}
   m_Layer: 0
   m_Name: BossLeftArm
   m_TagString: Hurt
@@ -1044,6 +1045,19 @@ MonoBehaviour:
   horizGroundForce: 7000
   horizAirForce: 6000
   vertForce: 900
+--- !u!114 &1166907000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4370261452900674771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0806a2689b9cce642beabaedfa17e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: {fileID: 4370261452900674771}
 --- !u!1 &4370261453109738478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,6 +1631,7 @@ GameObject:
   - component: {fileID: 4370261454055402160}
   - component: {fileID: 4370261454055402161}
   - component: {fileID: 404063816}
+  - component: {fileID: 3577013338055563756}
   m_Layer: 0
   m_Name: BossRightArm1
   m_TagString: Hurt
@@ -1808,6 +1823,19 @@ MonoBehaviour:
   horizGroundForce: 7000
   horizAirForce: 6000
   vertForce: 900
+--- !u!114 &3577013338055563756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4370261454055402190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c4fc84f165b12d40ad0e1799c9413c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: {fileID: 0}
 --- !u!1 &4370261454161549457
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,6 +2277,7 @@ GameObject:
   - component: {fileID: 4370261454643621643}
   - component: {fileID: 1656052344}
   - component: {fileID: 1656052347}
+  - component: {fileID: 396439787}
   m_Layer: 0
   m_Name: BossHead1
   m_TagString: Hurt
@@ -2420,6 +2449,19 @@ MonoBehaviour:
   horizGroundForce: 7000
   horizAirForce: 6000
   vertForce: 900
+--- !u!114 &396439787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4370261454643621641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e31397960a765b0438f0384576c16986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: {fileID: 724800673}
 --- !u!1 &6006921503007764747
 GameObject:
   m_ObjectHideFlags: 0

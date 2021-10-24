@@ -335,6 +335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
+--- !u!1 &396439782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4370261454643621641, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
+  m_PrefabInstance: {fileID: 1203258762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &404063815 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4370261454055402190, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
@@ -418,11 +423,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
---- !u!1 &724800673 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 724800673, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
-  m_PrefabInstance: {fileID: 1203258762}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &725748183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1515315224171096014, guid: 4786683ab091b9744950b9dbb01023a4, type: 3}
@@ -767,18 +767,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1164712675}
-    - target: {fileID: 724800676, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
-      propertyPath: m_Positions.Array.data[1].x
-      value: -1.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 724800676, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.16980863
-      objectReference: {fileID: 0}
-    - target: {fileID: 724800676, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
-      value: 0.23898631
-      objectReference: {fileID: 0}
     - target: {fileID: 4370261453867561681, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -862,7 +850,7 @@ GameObject:
   - component: {fileID: 1803159164}
   - component: {fileID: 1803159166}
   m_Layer: 6
-  m_Name: EyeShot
+  m_Name: EyeShot1
   m_TagString: Danger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -971,9 +959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d58c8f2bbf56aa4b97759c32e98fc3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animated: 0
-  eyeAttack: 1
-  part: {fileID: 724800673}
+  part: {fileID: 396439782}
 --- !u!1 &1949754134 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1515315224171096014, guid: 4786683ab091b9744950b9dbb01023a4, type: 3}
@@ -997,7 +983,7 @@ GameObject:
   - component: {fileID: 2081955722}
   - component: {fileID: 2081955724}
   m_Layer: 6
-  m_Name: ArmShot
+  m_Name: ArmShot1
   m_TagString: Danger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1030,7 +1016,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 9.47457, y: -7.166914}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1041,7 +1027,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 51.01586, y: 23.7209}
+  m_Size: {x: 55.320168, y: 38.27821}
   m_EdgeRadius: 0
 --- !u!212 &2081955723
 SpriteRenderer:
@@ -1106,8 +1092,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d58c8f2bbf56aa4b97759c32e98fc3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animated: 0
-  eyeAttack: 0
   part: {fileID: 404063815}
 --- !u!1 &2108886984
 GameObject:
@@ -1122,7 +1106,7 @@ GameObject:
   - component: {fileID: 2108886986}
   - component: {fileID: 2108886988}
   m_Layer: 6
-  m_Name: Slam
+  m_Name: Slam1
   m_TagString: Danger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1155,7 +1139,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.12438488, y: 0.758358}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1166,7 +1150,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.39513, y: 11.22504}
+  m_Size: {x: 23.62425, y: 12.741756}
   m_EdgeRadius: 0
 --- !u!212 &2108886987
 SpriteRenderer:
@@ -1231,8 +1215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d58c8f2bbf56aa4b97759c32e98fc3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animated: 1
-  eyeAttack: 0
   part: {fileID: 1166906994}
 --- !u!1001 &3372104207189804277
 PrefabInstance:
