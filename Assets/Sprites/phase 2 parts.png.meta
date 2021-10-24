@@ -1,7 +1,46 @@
 fileFormatVersion: 2
 guid: df4b237639f49f240aef0b43937a46bb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8462897738639913131
+    second: phase 2 parts_0
+  - first:
+      213: 6596250100978747184
+    second: phase 2 parts_1
+  - first:
+      213: -3128106690751367993
+    second: phase 2 parts_2
+  - first:
+      213: -1723065870570505200
+    second: phase 2 parts_3
+  - first:
+      213: 7790625696693180958
+    second: phase 2 parts_4
+  - first:
+      213: -366988317799196997
+    second: phase 2 parts_5
+  - first:
+      213: -4889927873285791402
+    second: phase 2 parts_6
+  - first:
+      213: -1492689809621110909
+    second: phase 2 parts_7
+  - first:
+      213: -8893347883414893009
+    second: phase 2 parts_8
+  - first:
+      213: 6347785324052848878
+    second: phase 2 parts_9
+  - first:
+      213: -1720841714464328174
+    second: phase 2 parts_10
+  - first:
+      213: 3142519412157070066
+    second: phase 2 parts_11
+  - first:
+      213: 6805001090975804317
+    second: phase 2 parts_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +80,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +114,330 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: phase 2 parts_0
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 2598
+        width: 755
+        height: 860
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f49e5585fbd8a80800000000000000
+      internalID: -8462897738639913131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts_1
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1401
+        width: 1033
+        height: 1107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0370976b4869a8b50800000000000000
+      internalID: 6596250100978747184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 168
+        width: 2123
+        height: 1086
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4fd36c98bb694d0800000000000000
+      internalID: -3128106690751367993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts_3
+      rect:
+        serializedVersion: 2
+        x: 2131
+        y: 2622
+        width: 406
+        height: 685
+      alignment: 9
+      pivot: {x: 0.30673623, y: 0.8109154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01cbb0c48b07618e0800000000000000
+      internalID: -1723065870570505200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts_4
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 1344
+        width: 598
+        height: 758
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a5d6d6bccdd1c60800000000000000
+      internalID: 7790625696693180958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts_5
+      rect:
+        serializedVersion: 2
+        x: 3270
+        y: 2819
+        width: 181
+        height: 521
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb65cd0c11238eaf0800000000000000
+      internalID: -366988317799196997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts_6
+      rect:
+        serializedVersion: 2
+        x: 3852
+        y: 2438
+        width: 439
+        height: 858
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651e487d18c732cb0800000000000000
+      internalID: -4889927873285791402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts_7
+      rect:
+        serializedVersion: 2
+        x: 4599
+        y: 1822
+        width: 593
+        height: 1589
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f20b9d686e84be0800000000000000
+      internalID: -1492689809621110909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts_8
+      rect:
+        serializedVersion: 2
+        x: 5437
+        y: 1356
+        width: 353
+        height: 1870
+      alignment: 9
+      pivot: {x: 0.48839054, y: 0.89448035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e4511183b749480800000000000000
+      internalID: -8893347883414893009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts_9
+      rect:
+        serializedVersion: 2
+        x: 3278
+        y: 349
+        width: 366
+        height: 714
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0ab96ce1dd71850800000000000000
+      internalID: 6347785324052848878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts_10
+      rect:
+        serializedVersion: 2
+        x: 3752
+        y: 381
+        width: 393
+        height: 686
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216fdaef3975e18e0800000000000000
+      internalID: -1720841714464328174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts_11
+      rect:
+        serializedVersion: 2
+        x: 4310
+        y: 381
+        width: 373
+        height: 662
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa346d61c87c9b20800000000000000
+      internalID: 3142519412157070066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts_12
+      rect:
+        serializedVersion: 2
+        x: 4743
+        y: 365
+        width: 361
+        height: 698
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b22c31078307e50800000000000000
+      internalID: 6805001090975804317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
