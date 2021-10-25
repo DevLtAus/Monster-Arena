@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class EyeDanger : MonoBehaviour, ActivateDanger
 {
@@ -9,12 +10,24 @@ public class EyeDanger : MonoBehaviour, ActivateDanger
 
     public void BecomeDangerous()
     {
-        eAtk.attackAllowed = true;
+        try {
+            eAtk.attackAllowed = true;
+        }
+        catch (NullReferenceException ex) {
+            //Debug.Log("Monster part isn't active");
+            Debug.Log(ex);
+        }
     }
 
     public void BecomeSafe()
     {
-        eAtk.attackAllowed = false;
+        try {
+            eAtk.attackAllowed = false;
+        }
+        catch (NullReferenceException ex) {
+            //Debug.Log("Monster part isn't active");
+            Debug.Log(ex);
+        }
     }
 
     // Start is called before the first frame update

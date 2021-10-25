@@ -71,7 +71,6 @@ public class ArmShotAttack : MonoBehaviour
 
         switch(canMove) {
             case true:
-                //targetDirection = target.position - transform.position;
                 switch(aiming) {
                     case false:
                         targetDirection = target.position - transform.position;
@@ -90,10 +89,12 @@ public class ArmShotAttack : MonoBehaviour
                                     aiming = true;
                                 }
                             }
-                            Debug.DrawRay(shotSource.transform.position, shotSource.transform.up * range, Color.red);
+                            // (Lucas) Show where we are aiming in the scene view
+                            //Debug.DrawRay(shotSource.transform.position, shotSource.transform.up * range, Color.red);
                         }
                         break;
                     case true:
+                        // (Lucas) Aiming state, short pause before firing
                         if(aimTimer > 0) {
                             aimTimer -= 1;
                         }
@@ -104,6 +105,7 @@ public class ArmShotAttack : MonoBehaviour
                 }
                 break;
             case false:
+                // (Lucas) Attack is deactivated, go back to default position
                 targetDirection = defaultDirection;
                 break;
         }

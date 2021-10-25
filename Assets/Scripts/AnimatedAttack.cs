@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class AnimatedAttack : MonoBehaviour, ActivateDanger
 {
@@ -10,12 +11,24 @@ public class AnimatedAttack : MonoBehaviour, ActivateDanger
 
     public void BecomeDangerous()
     {
-        anim.SetBool("waiting", false);
+        try {
+            anim.SetBool("waiting", false);
+        }
+        catch (NullReferenceException ex) {
+            //Debug.Log("Monster part isn't active");
+            Debug.Log(ex);
+        }
     }
 
     public void BecomeSafe()
     {
-        anim.SetBool("waiting", true);
+        try {
+            anim.SetBool("waiting", true);
+        }
+        catch (NullReferenceException ex) {
+            //Debug.Log("Monster part isn't active");
+            Debug.Log(ex);
+        }
     }
 
     // Start is called before the first frame update

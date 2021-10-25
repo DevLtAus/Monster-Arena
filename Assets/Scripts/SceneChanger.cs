@@ -70,6 +70,7 @@ public class SceneChanger : MonoBehaviour
             }
             catch (NullReferenceException ex) {
                 //Debug.Log("Boss health slider is already inactive");
+                Debug.Log(ex);
             }
         }
     }

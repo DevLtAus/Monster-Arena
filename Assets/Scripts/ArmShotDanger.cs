@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ArmShotDanger : MonoBehaviour, ActivateDanger
 {
@@ -10,13 +11,25 @@ public class ArmShotDanger : MonoBehaviour, ActivateDanger
     public void BecomeDangerous()
     {
         //Debug.Log("Arm shot dangerous");
-        aAtk.canMove = true;
+        try {
+            aAtk.canMove = true;
+        }
+        catch (NullReferenceException ex) {
+            //Debug.Log("Monster part isn't active");
+            Debug.Log(ex);
+        }
     }
 
     public void BecomeSafe()
     {
         //Debug.Log("Arm shot safe");
-        aAtk.canMove = false;
+        try {
+            aAtk.canMove = false;
+        }
+        catch (NullReferenceException ex) {
+            //Debug.Log("Monster part isn't active");
+            Debug.Log(ex);
+        }
     }
 
     // Start is called before the first frame update

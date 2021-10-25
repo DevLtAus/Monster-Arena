@@ -76,11 +76,13 @@ public class EyeAttack : MonoBehaviour
         hits = new RaycastHit2D[20];
         hitCount = Physics2D.Raycast(transform.position, newDirection, filter, hits);
         RaycastHit2D hit = hits[1];
+        // (Lucas) Checking the raycast
         if (hit.collider != null) {
             hitPos = hit.transform.position;
             hitPoint = hit.point;
             Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
             distance = Vector2.Distance(hit.point, myPos);
+            // (Lucas) If the raycast is hitting the player
             if (hit.transform.gameObject.tag == "Player" && !coolingDown && attackAllowed && !attacking && !firing) {
                 attacking = true;
                 attackDelayTimer = attackDelay;
@@ -95,14 +97,17 @@ public class EyeAttack : MonoBehaviour
                 hManager.DamagePlayer(damage);
             }
         }
-        Debug.DrawRay(transform.position, newDirection * targetDistance, Color.green);
-        Debug.DrawRay(transform.position, newDirection * distance, Color.red);
+        // (Lucas) Draw raycasts in the scene view
+        //Debug.DrawRay(transform.position, newDirection * targetDistance, Color.green);
+        //Debug.DrawRay(transform.position, newDirection * distance, Color.red);
 
         switch(attacking) {
             case false:
+                // (Lucas) Not attacking, we can rotate
                 transform.rotation = Quaternion.LookRotation(newDirection);
                 switch(coolingDown) {
                     case true:
+                        // (Lucas) In the cooldown phase
                         if (cooldownTimer > 0) {
                             cooldownTimer -= 1;
                         }
@@ -113,23 +118,27 @@ public class EyeAttack : MonoBehaviour
                     case false:
                         break;
                 }
+                // (Lucas) Hide the laser
                 line.SetPositions(norm);
                 break;
             case true:
                 switch(attackAllowed) {
                     case true:
+                        // (Lucas) We're allowed to attack and are attacking
+                        // (Lucas) Show the laser
                         pos = new List<Vector3>();
                         pos.Add(transform.position);
                         pos.Add(hitPoint);
                         line.SetPositions(pos.ToArray());
 
+                        // (Lucas) Short pause before we properly fire
                         if (attackDelayTimer > 0) {
                             attackDelayTimer -= 1;
                         }
                         else {
-                            //Attack();
                             switch(firing) {
                                 case true:
+                                    // (Lucas) Firing
                                     Attack();
                                     break;
                                 case false:
@@ -140,6 +149,7 @@ public class EyeAttack : MonoBehaviour
                         }
                         break;
                     case false:
+                        // (Lucas) Hide the laser
                         line.SetPositions(norm);
                         break;
                 }
@@ -149,17 +159,18 @@ public class EyeAttack : MonoBehaviour
 
     private void Attack()
     {
+        // (Lucas) Attack laser will stay out for a short while
         if (attackDurationTimer > 0) {
             attackDurationTimer -= 1;
 
             // (Lucas) Show the attack using a line renderer
-            //line.SetPositions(pos.ToArray());
             line.endColor = fireEnd;
             line.startColor = fireStart;
 
             Debug.Log("Attacking the player");
         }
         else {
+            // (Lucas) Attack is over, go into the cooldown state
             attacking = false;
             firing = false;
             Cooldown();
@@ -168,6 +179,7 @@ public class EyeAttack : MonoBehaviour
 
     private void Cooldown()
     {
+        // (Lucas) Start the cooldown phase
         cooldownTimer = cooldown;
         coolingDown = true;
     }

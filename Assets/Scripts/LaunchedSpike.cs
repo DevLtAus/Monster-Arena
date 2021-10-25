@@ -43,13 +43,6 @@ public class LaunchedSpike : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 
-    /*void Awake()
-    {
-        sRend = gameObject.GetComponent<SpriteRenderer>();
-        rigid  = gameObject.GetComponent<Rigidbody2D>();
-        poly = gameObject.GetComponent<PolygonCollider2D>();
-    }*/
-
     // Update is called once per frame
     void Update()
     {
