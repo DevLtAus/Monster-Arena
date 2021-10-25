@@ -1385,7 +1385,7 @@ Transform:
   - {fileID: 7441313300032406228}
   - {fileID: 4370261452900674772}
   - {fileID: 5764254939518967918}
-  - {fileID: 4370261454055402163}
+  - {fileID: 3208975989741927863}
   - {fileID: 6392537869276536992}
   - {fileID: 4370261454265460503}
   - {fileID: 1234880601462209962}
@@ -1631,9 +1631,8 @@ GameObject:
   - component: {fileID: 4370261454055402160}
   - component: {fileID: 4370261454055402161}
   - component: {fileID: 404063816}
-  - component: {fileID: 3577013338055563756}
   m_Layer: 0
-  m_Name: BossRightArm1
+  m_Name: BossRightArm
   m_TagString: Hurt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1646,14 +1645,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4370261454055402190}
-  m_LocalRotation: {x: -0, y: -0, z: 0.3420201, w: 0.9396927}
-  m_LocalPosition: {x: 37.501865, y: 0.27254486, z: 94.418106}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9750117, w: 0.22215366}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4370261454000431571}
-  m_Father: {fileID: 4370261453867561681}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40}
+  m_Father: {fileID: 3208975989741927863}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 154.329}
 --- !u!212 &4370261454055402160
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1823,19 +1822,6 @@ MonoBehaviour:
   horizGroundForce: 7000
   horizAirForce: 6000
   vertForce: 900
---- !u!114 &3577013338055563756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4370261454055402190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c4fc84f165b12d40ad0e1799c9413c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  part: {fileID: 0}
 --- !u!1 &4370261454161549457
 GameObject:
   m_ObjectHideFlags: 0
@@ -2462,6 +2448,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   part: {fileID: 724800673}
+--- !u!1 &5206934612621502162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3208975989741927863}
+  - component: {fileID: 7869297794244755790}
+  - component: {fileID: 7912102042441098659}
+  m_Layer: 0
+  m_Name: BossRightArm1
+  m_TagString: Hurt
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3208975989741927863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206934612621502162}
+  m_LocalRotation: {x: 0, y: -0, z: 0.81439424, w: -0.5803121}
+  m_LocalPosition: {x: 36.920525, y: -0.3774548, z: 94.41811}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4370261454055402163}
+  m_Father: {fileID: 4370261453867561681}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 250.945}
+--- !u!114 &7869297794244755790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206934612621502162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c4fc84f165b12d40ad0e1799c9413c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: {fileID: 5206934612621502162}
+--- !u!114 &7912102042441098659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206934612621502162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6fbb519faf2f24cb5af1df172f186f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canMove: 0
+  target: {fileID: 0}
+  speed: 0.15
+  maxRotation: 267.301
+  minRotation: 235.156
+  defaultRotation: {x: 0, y: 0, z: 250.945}
+  defaultDirection: {x: 43.23559, y: -14.44389, z: -0.000007629395}
+  range: 1
 --- !u!1 &6006921503007764747
 GameObject:
   m_ObjectHideFlags: 0
