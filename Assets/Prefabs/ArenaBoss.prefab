@@ -1453,7 +1453,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.3993201, w: 0.91681165}
   m_LocalPosition: {x: 11.51, y: -22.849998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8723068124329345878}
   m_Father: {fileID: 4370261454055402163}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 47.071}
@@ -1591,17 +1592,9 @@ PolygonCollider2D:
       - {x: -0.3953032, y: -9.845652}
       - {x: -0.9116313, y: -10.491062}
       - {x: -0.8255766, y: -10.491062}
-    - - {x: -1.9873148, y: -8.081531}
-      - {x: -1.9012601, y: -8.038504}
-      - {x: -1.6861235, y: -7.7373123}
-      - {x: -1.6430961, y: -6.6616287}
-      - {x: -1.6861235, y: -5.2417264}
-      - {x: -1.5140141, y: -4.940535}
-      - {x: -1.0837407, y: -5.0265894}
-      - {x: -1.126768, y: -6.5325465}
-      - {x: -1.2988774, y: -7.3930936}
-      - {x: -1.7291508, y: -8.468777}
-      - {x: -1.9873148, y: -8.640886}
+    - - {x: -1.7741268, y: -5.0534325}
+      - {x: -1.1888192, y: -4.831827}
+      - {x: -1.4178386, y: -4.9637194}
 --- !u!114 &958237141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1645,14 +1638,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4370261454055402190}
-  m_LocalRotation: {x: -0, y: -0, z: 0.9750117, w: 0.22215366}
+  m_LocalRotation: {x: -0, y: -0, z: 0.96770716, w: 0.25207725}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4370261454000431571}
   m_Father: {fileID: 3208975989741927863}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 154.329}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 150.799}
 --- !u!212 &4370261454055402160
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2508,12 +2501,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove: 0
   target: {fileID: 0}
-  speed: 0.15
+  speed: 0.2
   maxRotation: 267.301
   minRotation: 235.156
   defaultRotation: {x: 0, y: 0, z: 250.945}
   defaultDirection: {x: 43.23559, y: -14.44389, z: -0.000007629395}
-  range: 1
+  range: 30
+  shotSource: {fileID: 7240637623068743146}
+  spikeFab: {fileID: 5475015423847525982, guid: e429f1150d3798448822764640c6fd20, type: 3}
+  spikeSpeed: 40
+  cooldown: 60
+  aimTime: 10
 --- !u!1 &6006921503007764747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,6 +2770,36 @@ PolygonCollider2D:
     - - {x: 5.9063196, y: -10.720194}
       - {x: 1.243973, y: -10.889397}
       - {x: -5.6639357, y: -10.731946}
+--- !u!1 &7240637623068743146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8723068124329345878}
+  m_Layer: 0
+  m_Name: ArmAttackOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8723068124329345878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7240637623068743146}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9878646, w: -0.15531754}
+  m_LocalPosition: {x: -0.35, y: -4.68, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4370261454000431571}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8228321153981036065
 GameObject:
   m_ObjectHideFlags: 0

@@ -94,18 +94,6 @@ public class EyeAttack : MonoBehaviour
             else if (hit.transform.gameObject.tag == "Player" && firing && attackAllowed) {
                 hManager.DamagePlayer(damage);
             }
-
-            /*switch(attacking) {
-                case true:
-                    pos = new List<Vector3>();
-                    pos.Add(transform.position);
-                    pos.Add(hitPos);
-                    line.SetPositions(pos.ToArray());
-                    break;
-                case false:
-                    line.SetPositions(norm);
-                    break;
-            }*/
         }
         Debug.DrawRay(transform.position, newDirection * targetDistance, Color.green);
         Debug.DrawRay(transform.position, newDirection * distance, Color.red);
@@ -176,9 +164,6 @@ public class EyeAttack : MonoBehaviour
             firing = false;
             Cooldown();
         }
-        //Debug.Log("Attacking the player");
-        //attacking = false;
-        //Cooldown();
     }
 
     private void Cooldown()
