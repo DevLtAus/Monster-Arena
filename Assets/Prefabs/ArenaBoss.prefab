@@ -2714,7 +2714,7 @@ MonoBehaviour:
   range: 50
   shotSource: {fileID: 8417426484831807297}
   spikeFab: {fileID: 5475015423847525982, guid: e429f1150d3798448822764640c6fd20, type: 3}
-  spikeSpeed: 40
+  spikeSpeed: 80
   cooldown: 40
   aimTime: 20
 --- !u!1 &5206934612621502162
@@ -2785,7 +2785,7 @@ MonoBehaviour:
   range: 30
   shotSource: {fileID: 7240637623068743146}
   spikeFab: {fileID: 5475015423847525982, guid: e429f1150d3798448822764640c6fd20, type: 3}
-  spikeSpeed: 40
+  spikeSpeed: 80
   cooldown: 60
   aimTime: 10
 --- !u!1 &6006921503007764747
