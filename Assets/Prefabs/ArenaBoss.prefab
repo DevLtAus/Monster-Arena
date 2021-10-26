@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 0.5
+  speed: 0.7
   range: 30
   distance: 0
   hitPos: {x: 0, y: 0, z: 0}
   hitPoint: {x: 0, y: 0, z: 0}
-  attackDelay: 70
+  attackDelay: 60
   attacking: 0
   attackDuration: 30
   firing: 0
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 0.5
+  speed: 1
   range: 30
   distance: 0
   hitPos: {x: 0, y: 0, z: 0}
@@ -224,7 +224,7 @@ MonoBehaviour:
   attacking: 0
   attackDuration: 50
   firing: 0
-  cooldown: 80
+  cooldown: 70
   coolingDown: 0
   attackAllowed: 1
   damage: 1
