@@ -25,17 +25,31 @@ public class HealthManager : MonoBehaviour
     public int pHealth;
     public int playerMaxHealth;
     Slider pSlider;
+    GameObject player;
+    Rigidbody2D playerBody;
     
     // (Lucas) Player invulnerability
     public float playerIFrames;
     private float playerIFrameTimer = 0;
     public bool playerInvuln = false;
 
+    // (Elliot) Canvases
+    GameObject healthCanvas;
+    GameObject gameOverCanvas;
+
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         pHealth = playerMaxHealth;
         sceneChanger = gameObject.GetComponent<SceneChanger>();
+
+        player = GameObject.Find("Player");
+        playerBody = player.GetComponent<Rigidbody2D>();
+        playerBody.bodyType = RigidbodyType2D.Dynamic;
+
+        healthCanvas = GameObject.Find("HealthCanvas");
+        gameOverCanvas = GameObject.Find("GameOverCanvas");
+        gameOverCanvas.SetActive(false);
     }
 
     void Awake()
@@ -90,8 +104,16 @@ public class HealthManager : MonoBehaviour
                 pHealth -= damage;
                 if (pHealth <= 0) {
                     pHealth = 0;
-                    // (Lucas) Go to the game over screen.
-                    sceneChanger.Lose();
+                    // (Elliot) Disable player rigidbody, deactivate health canvas and activate game over canvas
+                    GameObject player = GameObject.Find("Player");
+                    Rigidbody2D playerBody = player.GetComponent<Rigidbody2D>();
+                    GameObject playerRender = player.transform.Find("Square").gameObject;
+
+                    playerBody.bodyType = RigidbodyType2D.Static;
+                    playerRender.SetActive(false);
+                    
+                    healthCanvas.SetActive(false);
+                    gameOverCanvas.SetActive(true);
                 }
                 pSlider.value = pHealth;
                 playerIFrameTimer = playerIFrames;

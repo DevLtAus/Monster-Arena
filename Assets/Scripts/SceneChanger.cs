@@ -22,22 +22,41 @@ public class SceneChanger : MonoBehaviour
     // (Lucas) Maybe going to store the position and health of the player each time
     // (Lucas) a monster part breaks to reload to that point.
     private HealthManager hm;
+    public GameObject boss;
+    private PhaseManager pm;
+
+    // (Elliot) Canvases to enable/disable on save changing
+    GameObject healthCanvas;
+    GameObject gameOverCanvas;
 
 
     // Start is called before the first frame update
     void Start()
     {
         hm = gameObject.GetComponent<HealthManager>();
+        pm = boss.GetComponent<PhaseManager>();
+
+        healthCanvas = GameObject.Find("HealthCanvas");
+        gameOverCanvas = GameObject.Find("GameOverCanvas");
+    }
+
+    public void ResetCanvas()
+    {
+        healthCanvas.SetActive(true);
+        gameOverCanvas.SetActive(false);
     }
 
     public void ArenaFromBeginning()
     {
         SceneManager.LoadScene(arenaName);
+        ResetCanvas();
     }
 
     public void ArenaFromQuickSave()
     {
-        // (Lucas) Will complete once weak spot health is implemented.
+        SceneManager.LoadScene(arenaName);
+        ResetCanvas();
+        pm.Phase = 1;
     }
 
     public void TutorialLevel()
