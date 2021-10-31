@@ -40,22 +40,18 @@ public class SceneChanger : MonoBehaviour
         gameOverCanvas = GameObject.Find("GameOverCanvas");
     }
 
-    public void ResetCanvas()
-    {
-        healthCanvas.SetActive(true);
-        gameOverCanvas.SetActive(false);
-    }
-
     public void ArenaFromBeginning()
     {
         SceneManager.LoadScene(arenaName);
-        ResetCanvas();
+        healthCanvas.SetActive(true);
+        hm.Start();
     }
 
     public void ArenaFromQuickSave()
     {
         SceneManager.LoadScene(arenaName);
-        ResetCanvas();
+        healthCanvas.SetActive(true);
+        hm.Start();
         pm.Phase = 1;
     }
 
