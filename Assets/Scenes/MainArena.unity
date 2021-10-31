@@ -522,6 +522,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1515315224171096017, guid: 4786683ab091b9744950b9dbb01023a4, type: 3}
       propertyPath: canActivateBoss
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068470019635901546, guid: 4786683ab091b9744950b9dbb01023a4, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068470019635901546, guid: 4786683ab091b9744950b9dbb01023a4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0.015686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068470019635901546, guid: 4786683ab091b9744950b9dbb01023a4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 0.6392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068470019635901546, guid: 4786683ab091b9744950b9dbb01023a4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

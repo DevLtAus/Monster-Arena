@@ -7,6 +7,7 @@ public class WeakSpot : MonoBehaviour
 {
     // (Elliot) health is public variable with value of 1 by default
     public int health = 1;
+    public int activeEmissionRate;
     // (Elliot) Is damaging this weak spot required to activate the boss?
     public bool canActivateBoss = false;
     private bool isActive = true;
@@ -18,6 +19,7 @@ public class WeakSpot : MonoBehaviour
 
     Canvas wCanvas;
     Slider wSlider;
+    ParticleSystem ps;
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +30,23 @@ public class WeakSpot : MonoBehaviour
         wSlider = GetComponentInChildren<Slider>();
         wSlider.maxValue = health;
         wSlider.value = health;
+
+        ps = GetComponentInChildren<ParticleSystem>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // (Elliot) Change how to weak spot looks according to the activation state
+        var main = ps.main;
+        var em = ps.emission;
+        if (isActive) {
+            em.rateOverTime = activeEmissionRate;
+            main.startColor = Color.white;
+        } else {
+            em.rateOverTime = activeEmissionRate / 50;
+            main.startColor = Color.black;
+        }
     }
 
     // (Elliot) Damage the weak spot and disable it when health reaches 0

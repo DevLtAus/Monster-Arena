@@ -485,6 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  activeEmissionRate: 100
   canActivateBoss: 0
 --- !u!1001 &6709516636490705412
 PrefabInstance:
