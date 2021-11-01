@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2274935054665775787, guid: 3f1f36e52dfce314baa9e2bb87e9746d, type: 3}
+  m_Sprite: {fileID: -2837097873457967335, guid: 4735d69e41c6eaa49ae4fe8bbcedac3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,8 +121,8 @@ MonoBehaviour:
   - {fileID: 578909380152081513}
   - {fileID: 1901338895549363959}
   m_Bounds:
-    m_Center: {x: 11.692072, y: 0.4839921, z: 0}
-    m_Extent: {x: 13.618159, y: 4.864593, z: 0}
+    m_Center: {x: 12.478972, y: 2.0755398, z: 0}
+    m_Extent: {x: 14.125261, y: 3.6802986, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &4350164295987071894
@@ -198,7 +198,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3328866549301556959, guid: 3f1f36e52dfce314baa9e2bb87e9746d, type: 3}
+  m_Sprite: {fileID: -7078091795209531706, guid: 4735d69e41c6eaa49ae4fe8bbcedac3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -225,8 +225,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.3605321, y: 0.8911931}
-    oldSize: {x: 7.64, y: 13.203288}
+    pivot: {x: 0.38406923, y: 0.87413704}
+    oldSize: {x: 7.5454545, y: 13.411234}
     newSize: {x: 7.64, y: 13.203288}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -359,7 +359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 578909380152081513}
   m_Layer: 0
-  m_Name: UpperArm
+  m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,7 +390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1901338895549363959}
   m_Layer: 0
-  m_Name: Forearm
+  m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
