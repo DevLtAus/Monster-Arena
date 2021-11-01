@@ -2379,6 +2379,10 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4190053676486570255, guid: 4c5eb6173186b3146bab37fe3e2203c6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 534940ccf06ed6a40a77170a3e0f180a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c5eb6173186b3146bab37fe3e2203c6, type: 3}
 --- !u!1001 &1589429971
