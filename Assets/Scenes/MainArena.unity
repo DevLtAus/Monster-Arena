@@ -1468,19 +1468,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 617250915262386950, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50.5048
+      value: -61.9
       objectReference: {fileID: 0}
     - target: {fileID: 1075251056678910863, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: boss
       value: 
       objectReference: {fileID: 1203258765}
+    - target: {fileID: 1237417009538671313, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2675ac73b89021342a5920960584a9f8, type: 3}
     - target: {fileID: 1372726300223684215, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1372726300223684215, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -44.75
+      value: -71
       objectReference: {fileID: 0}
     - target: {fileID: 1784544018003076295, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1490,17 +1494,69 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5369959963106528695, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 101.0602
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369959963106528695, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 108.4119
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369959963106528695, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.47531128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369959963106528695, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 9.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6626097188878500793, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_Name
       value: BeginningButton
       objectReference: {fileID: 0}
     - target: {fileID: 7383353196265318240, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7909434828087356492, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_Text
       value: '[BossName]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909434828087356492, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_Color.b
+      value: 0.38861352
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909434828087356492, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909434828087356492, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909434828087356492, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909434828087356492, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_RaycastPadding.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909434828087356492, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909434828087356492, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909434828087356492, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363859229707057325, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8655219647579486810, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_AnchorMax.x
