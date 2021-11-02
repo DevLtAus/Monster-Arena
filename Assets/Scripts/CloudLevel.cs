@@ -21,17 +21,6 @@ public class CloudLevel : MonoBehaviour
         }
     }
 
-    void Awake()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public IEnumerator Fade()
     {
         fading = true;
@@ -48,7 +37,6 @@ public class CloudLevel : MonoBehaviour
             }
             yield return new WaitForSeconds(fadeSpeed);
         }
-        //Destroy(gameObject);
         faded = true;
         fading = false;
     }

@@ -96,25 +96,10 @@ public class Cloud : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Player") {
-            //Debug.Log("Player is in danger");
-            switch(hurting) {
-                case false:
-                    //hurting = true;
-                    break;
-                case true:
-                    break;
-            }
-        }
-    }*/
-
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player") {
             hurting = false;
         }
-        //hurting = false;
     }
 }
