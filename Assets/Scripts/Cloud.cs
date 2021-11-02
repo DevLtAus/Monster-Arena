@@ -4,22 +4,33 @@ using UnityEngine;
 
 public class Cloud : MonoBehaviour
 {
-    //private int levels;
+    // (Lucas) Stuff for fading the clouds in
     private int curLevel = 0;
     public CloudLevel[] cloudLevels;
     private bool fadedIn = false;
+
+    // (Lucas) Stuff for making the clouds damage the player
     private bool damaging = false;
     private PolygonCollider2D poly;
+    private HealthManager healthy;
+    public int damage = 1;
+    public bool hurting = false;
+
+    // (Lucas) Timer for delay before damaging the player
+    public float hurtDelay = 1;
+    private float hurtDelayTimer = 0;
+
     // Start is called before the first frame update
     void Start()
     {
+        healthy = GameObject.Find("Game Manager").GetComponent<HealthManager>();
         poly = gameObject.GetComponent<PolygonCollider2D>();
         poly.enabled = false;
     }
 
     void Awake()
     {
-
+        healthy = GameObject.Find("Game Manager").GetComponent<HealthManager>();
     }
 
     // Update is called once per frame
@@ -30,6 +41,7 @@ public class Cloud : MonoBehaviour
                 switch (damaging) {
                     case false:
                         poly.enabled = true;
+                        damaging = true;
                         break;
                     case true:
                         break;
@@ -53,9 +65,25 @@ public class Cloud : MonoBehaviour
                                 StartCoroutine(cloudLevels[curLevel].Fade());
                                 break;
                         }
-                        //StartCoroutine(cloudLevels[curLevel].Fade());
                         break;
                 }
+                break;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        switch (hurting) {
+            case true:
+                if (hurtDelayTimer > 0) {
+                    hurtDelayTimer -= 1;
+                }
+                else {
+                    healthy.DamagePlayer(damage);
+                    hurtDelayTimer = hurtDelay;
+                }
+                break;
+            case false:
                 break;
         }
     }
@@ -63,7 +91,30 @@ public class Cloud : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player") {
-            Debug.Log("Player is in danger");
+            hurting = true;
+            hurtDelayTimer = hurtDelay;
         }
+    }
+
+    /*private void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player") {
+            //Debug.Log("Player is in danger");
+            switch(hurting) {
+                case false:
+                    //hurting = true;
+                    break;
+                case true:
+                    break;
+            }
+        }
+    }*/
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player") {
+            hurting = false;
+        }
+        //hurting = false;
     }
 }
