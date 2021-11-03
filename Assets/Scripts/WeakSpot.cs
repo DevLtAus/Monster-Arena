@@ -10,6 +10,8 @@ public class WeakSpot : MonoBehaviour
     public int activeEmissionRate;
     // (Elliot) Is damaging this weak spot required to activate the boss?
     public bool canActivateBoss = false;
+    public GameObject currentPhasePart = null;
+    public GameObject nextPhasePart = null;
     private bool isActive = true;
     public bool IsActive
     {
@@ -32,6 +34,10 @@ public class WeakSpot : MonoBehaviour
         wSlider.value = health;
 
         ps = GetComponentInChildren<ParticleSystem>();
+
+        if (currentPhasePart == null) {
+            currentPhasePart = gameObject;
+        }
     }
 
     // Update is called once per frame
@@ -59,7 +65,16 @@ public class WeakSpot : MonoBehaviour
             if (health <= 0)
             {
                 health = 0;
-                gameObject.SetActive(false);
+                // (Elliot) Deactivate the current phase and activate the next phase
+                currentPhasePart.SetActive(false);
+
+                try
+                {
+                    nextPhasePart.SetActive(true);
+                }
+                catch
+                {
+                }
             }
             wSlider.value = health;
         }
