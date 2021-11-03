@@ -335,6 +335,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76029196}
   m_CullTransparentMesh: 1
+--- !u!1 &193972336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 51415424, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+  m_PrefabInstance: {fileID: 565097257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &392018553
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +442,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: healthCanvas
+      value: 
+      objectReference: {fileID: 193972336}
+    - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: gameOverCanvas
+      value: 
+      objectReference: {fileID: 659496568}
     - target: {fileID: 9176974047772737929, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -487,6 +500,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+--- !u!1 &659496568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9098922098710192692, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+  m_PrefabInstance: {fileID: 565097257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &758988703
 GameObject:
   m_ObjectHideFlags: 0

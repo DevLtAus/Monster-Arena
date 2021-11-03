@@ -34,8 +34,8 @@ public class HealthManager : MonoBehaviour
     public bool playerInvuln = false;
 
     // (Elliot) Canvases
-    GameObject healthCanvas;
-    GameObject gameOverCanvas;
+    public GameObject healthCanvas;
+    public GameObject gameOverCanvas;
 
     // Start is called before the first frame update
     public void Start()
@@ -43,12 +43,17 @@ public class HealthManager : MonoBehaviour
         pHealth = playerMaxHealth;
         sceneChanger = gameObject.GetComponent<SceneChanger>();
 
-        player = GameObject.Find("Player");
-        playerBody = player.GetComponent<Rigidbody2D>();
-        playerBody.bodyType = RigidbodyType2D.Dynamic;
+        try {
+            player = GameObject.Find("Player");
+            playerBody = player.GetComponent<Rigidbody2D>();
+            playerBody.bodyType = RigidbodyType2D.Dynamic;
+        }
+        catch
+        {
+        }
 
-        healthCanvas = GameObject.Find("HealthCanvas");
-        gameOverCanvas = GameObject.Find("GameOverCanvas");
+        // healthCanvas = GameObject.Find("HealthCanvas");
+        // gameOverCanvas = GameObject.Find("GameOverCanvas");
         gameOverCanvas.SetActive(false);
     }
 
