@@ -38,7 +38,7 @@ public class Weapon : MonoBehaviour
         Vector3 target = mousePos - transform.position;
         //(Elliot) Converts comparison to degrees and rotates the object around the z axis
         angle = Mathf.Atan2(target.y, target.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + 90));
     }
 
     //(Elliot) Instantiates a rocket in the direction of the mouse cursor when the mouse is clicked
