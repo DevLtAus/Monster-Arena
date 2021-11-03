@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class EyeAttack : MonoBehaviour
 {
+    // (Lucas) Eye SFX
+    public AudioSource charge;
+    public AudioSource fire;
+
     public Transform target;
     public float speed = 1.0f;
     public float range = 1;
@@ -134,12 +138,19 @@ public class EyeAttack : MonoBehaviour
                         // (Lucas) Short pause before we properly fire
                         if (attackDelayTimer > 0) {
                             attackDelayTimer -= 1;
+                            // (Lucas) play charging SFX
+                            if (!charge.isPlaying) {
+                                charge.Play();
+                            }
                         }
                         else {
                             switch(firing) {
                                 case true:
                                     // (Lucas) Firing
                                     Attack();
+                                    if (charge.isPlaying) {
+                                        charge.Stop();
+                                    }
                                     break;
                                 case false:
                                     attackDurationTimer = attackDuration;
@@ -162,6 +173,9 @@ public class EyeAttack : MonoBehaviour
         // (Lucas) Attack laser will stay out for a short while
         if (attackDurationTimer > 0) {
             attackDurationTimer -= 1;
+            if (!fire.isPlaying) {
+                fire.Play();
+            }
 
             // (Lucas) Show the attack using a line renderer
             line.endColor = fireEnd;
@@ -173,6 +187,7 @@ public class EyeAttack : MonoBehaviour
             // (Lucas) Attack is over, go into the cooldown state
             attacking = false;
             firing = false;
+            fire.Stop();
             Cooldown();
         }
     }
