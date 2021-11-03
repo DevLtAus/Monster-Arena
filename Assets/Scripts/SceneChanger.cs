@@ -22,7 +22,7 @@ public class SceneChanger : MonoBehaviour
     // (Lucas) Maybe going to store the position and health of the player each time
     // (Lucas) a monster part breaks to reload to that point.
     private HealthManager hm;
-    public GameObject boss;
+    public GameObject boss = null;
     private PhaseManager pm;
 
     // (Elliot) Canvases to enable/disable on save changing
@@ -34,7 +34,12 @@ public class SceneChanger : MonoBehaviour
     void Start()
     {
         hm = gameObject.GetComponent<HealthManager>();
-        pm = boss.GetComponent<PhaseManager>();
+        try {
+            pm = boss.GetComponent<PhaseManager>();
+        }
+        catch
+        {
+        }
 
         healthCanvas = GameObject.Find("HealthCanvas");
         gameOverCanvas = GameObject.Find("GameOverCanvas");
