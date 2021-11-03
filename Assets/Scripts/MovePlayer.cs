@@ -7,6 +7,7 @@ public class MovePlayer : MonoBehaviour
 
     private Rigidbody2D body;
     private Transform trans;
+    public AnimatorHandler animatorHandler;
     [SerializeField] private float horizontalInput = 0f;
 
     // (Lucas) Buffer timers for if the player is trying to jump while not on the ground.
@@ -59,12 +60,25 @@ public class MovePlayer : MonoBehaviour
     {
         body = this.gameObject.GetComponent<Rigidbody2D>();
         trans = this.gameObject.GetComponent<Transform>();
+        animatorHandler = GetComponentInChildren<AnimatorHandler>();
     }
 
-    // (Elliot) Get horizontal input and store it.
+    // (Elliot) Get horizontal input and store it and set facing direction and movement in the animator
     public void SetHorizontalInput(float hi)
     {
         horizontalInput = hi;
+
+        if (hi > 0) {
+            animatorHandler.SetFacingRight(true);
+        }
+        if (hi < 0) {
+            animatorHandler.SetFacingRight(false);
+        }
+
+        animatorHandler.SetMoving(true);
+        if (hi == 0) {
+            animatorHandler.SetMoving(false);
+        }
     }
 
     // (Elliot) Get jump input and store it.
@@ -150,6 +164,9 @@ public class MovePlayer : MonoBehaviour
         // (Lucas) Check if the player is in the air then set gravity and drag accordingly.
         switch(aerial) {
             case true:
+                // (Elliot) Set animator handler to jump action
+                animatorHandler.SetAerial(true);
+
                 body.drag = airDrag;
                 if (apexBufferNeg <= body.velocity.y && body.velocity.y <= apexBufferPos) {
                     body.gravityScale = apexGrav;
@@ -162,6 +179,8 @@ public class MovePlayer : MonoBehaviour
                 }
                 break;
             case false:
+                animatorHandler.SetAerial(false);
+
                 switch(pushing) {
                     case true:
                         pushing = false;
@@ -203,6 +222,7 @@ public class MovePlayer : MonoBehaviour
 
         // (Lucas) Move the player.
         body.AddForce(horizontalInput * accel * trans.right, ForceMode2D.Impulse);
+
         // (Lucas) Check if the player is being pushed. If they aren't, cap their max speed.
         switch(pushed) {
             case true:
