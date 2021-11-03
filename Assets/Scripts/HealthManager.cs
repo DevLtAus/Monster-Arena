@@ -107,7 +107,7 @@ public class HealthManager : MonoBehaviour
                     // (Elliot) Disable player rigidbody, deactivate health canvas and activate game over canvas
                     GameObject player = GameObject.Find("Player");
                     Rigidbody2D playerBody = player.GetComponent<Rigidbody2D>();
-                    GameObject playerRender = player.transform.Find("Square").gameObject;
+                    GameObject playerRender = player.transform.Find("PlayerBody").gameObject;
 
                     playerBody.bodyType = RigidbodyType2D.Static;
                     playerRender.SetActive(false);
