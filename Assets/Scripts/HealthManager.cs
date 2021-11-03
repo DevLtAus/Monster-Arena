@@ -42,7 +42,7 @@ public class HealthManager : MonoBehaviour
     {
         pHealth = playerMaxHealth;
         sceneChanger = gameObject.GetComponent<SceneChanger>();
-        
+
         player = GameObject.Find("Player");
         playerBody = player.GetComponent<Rigidbody2D>();
         playerBody.bodyType = RigidbodyType2D.Dynamic;
