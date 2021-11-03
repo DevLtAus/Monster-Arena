@@ -49,7 +49,12 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(arenaName);
         healthCanvas.SetActive(true);
-        hm.Start();
+        try {
+            hm.Start();
+        }
+        catch
+        {
+        }
     }
 
     public void ArenaFromQuickSave()
@@ -88,9 +93,9 @@ public class SceneChanger : MonoBehaviour
             try {
                 hm.BSlider.gameObject.SetActive(false);
             }
-            catch (NullReferenceException ex) {
+            catch  {
                 //Debug.Log("Boss health slider is already inactive");
-                Debug.Log(ex);
+                //Debug.Log(ex);
             }
         }
     }
