@@ -49,20 +49,20 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(arenaName);
         healthCanvas.SetActive(true);
-        gameOverCanvas.SetActive(false);
         try {
             hm.Start();
         }
         catch
         {
         }
+        gameOverCanvas.SetActive(false);
     }
 
     public void ArenaFromQuickSave()
     {
         SceneManager.LoadScene(arenaName);
         healthCanvas.SetActive(true);
-        gameOverCanvas.SetActive(false);
+        //gameOverCanvas.SetActive(false);
         hm.Start();
         pm.Phase = 1;
     }
