@@ -7,6 +7,7 @@ public class PhaseManager : MonoBehaviour
     private GameObject gm;
     private HealthManager hm;
     private Camera cam;
+    public AudioSource theme;
 
     public string bossName;
     BossHealth boss;
@@ -25,6 +26,9 @@ public class PhaseManager : MonoBehaviour
     // (Elliot) Deactivates all weakspots at the start except the ones that are required to activate the boss
     void Inactive() // PHASE 0
     {
+        if (theme.isPlaying) {
+            theme.Stop();
+        }
         foreach (GameObject i in weakSpots)
         {
             WeakSpot ws = i.GetComponent<WeakSpot>();
@@ -39,6 +43,9 @@ public class PhaseManager : MonoBehaviour
     {
         hm.ActivateBoss(bossName);
         EnableWeakSpots();
+        if (!theme.isPlaying) {
+            theme.Play();
+        }
 
         if (cam.orthographicSize < camBossSize) {
             cam.orthographicSize += 0.05f;
@@ -51,6 +58,7 @@ public class PhaseManager : MonoBehaviour
         gm = GameObject.Find("Game Manager");
         hm = gm.GetComponent<HealthManager>();
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        theme = cam.GetComponent<AudioSource>();
 
         camBossSize = cam.orthographicSize + cameraSizeIncrease;
         boss = this.GetComponent<BossHealth>();

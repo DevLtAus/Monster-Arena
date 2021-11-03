@@ -24,6 +24,14 @@ public class AttackManager : MonoBehaviour
         }
     }
 
+    void OnTriggerStay2D(Collider2D col)
+    {
+        // (Lucas) If the player entered, activate the part.
+        if (col.gameObject.tag == "Player") {
+            aDanger.BecomeDangerous();
+        }
+    }
+
     void OnTriggerExit2D(Collider2D col)
     {
         // (Lucas) If the player left, deactivate the part.
