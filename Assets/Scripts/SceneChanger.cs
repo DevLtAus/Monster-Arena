@@ -49,6 +49,7 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(arenaName);
         healthCanvas.SetActive(true);
+        gameOverCanvas.SetActive(false);
         try {
             hm.Start();
         }
@@ -61,6 +62,7 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(arenaName);
         healthCanvas.SetActive(true);
+        gameOverCanvas.SetActive(false);
         hm.Start();
         pm.Phase = 1;
     }
@@ -68,6 +70,7 @@ public class SceneChanger : MonoBehaviour
     public void TutorialLevel()
     {
         SceneManager.LoadScene(tutorialName);
+        gameOverCanvas.SetActive(false);
     }
 
     public void Lose()
