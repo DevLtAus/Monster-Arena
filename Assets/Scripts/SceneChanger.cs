@@ -51,26 +51,31 @@ public class SceneChanger : MonoBehaviour
         healthCanvas.SetActive(true);
         try {
             hm.Start();
+            gameOverCanvas.SetActive(false);
         }
         catch
         {
         }
-        gameOverCanvas.SetActive(false);
     }
 
     public void ArenaFromQuickSave()
     {
         SceneManager.LoadScene(arenaName);
         healthCanvas.SetActive(true);
-        //gameOverCanvas.SetActive(false);
-        hm.Start();
-        pm.Phase = 1;
+        try {
+            hm.Start();
+            gameOverCanvas.SetActive(false);
+            pm.Phase = 1;
+        }
+        catch
+        {
+        }
     }
 
     public void TutorialLevel()
     {
         SceneManager.LoadScene(tutorialName);
-        gameOverCanvas.SetActive(false);
+        //gameOverCanvas.SetActive(false);
     }
 
     public void Lose()
