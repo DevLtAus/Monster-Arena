@@ -49,15 +49,18 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(arenaName);
         healthCanvas.SetActive(true);
-        gameOverCanvas.SetActive(false);
-        hm.Start();
+        try {
+            hm.Start();
+        }
+        catch
+        {
+        }
     }
 
     public void ArenaFromQuickSave()
     {
         SceneManager.LoadScene(arenaName);
         healthCanvas.SetActive(true);
-        gameOverCanvas.SetActive(false);
         hm.Start();
         pm.Phase = 1;
     }
@@ -65,7 +68,6 @@ public class SceneChanger : MonoBehaviour
     public void TutorialLevel()
     {
         SceneManager.LoadScene(tutorialName);
-        gameOverCanvas.SetActive(false);
     }
 
     public void Lose()
@@ -90,13 +92,10 @@ public class SceneChanger : MonoBehaviour
         if (curScene.name != arenaName) {
             try {
                 hm.BSlider.gameObject.SetActive(false);
-                //gameOverCanvas.SetActive(false);
-                //healthCanvas.SetActive(false);
-                Debug.Log(curScene.name);
             }
-            catch (NullReferenceException ex) {
+            catch  {
                 //Debug.Log("Boss health slider is already inactive");
-                Debug.Log(ex);
+                //Debug.Log(ex);
             }
         }
     }
