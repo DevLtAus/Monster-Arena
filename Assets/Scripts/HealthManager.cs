@@ -112,8 +112,8 @@ public class HealthManager : MonoBehaviour
                     playerBody.bodyType = RigidbodyType2D.Static;
                     playerRender.SetActive(false);
                     
-                    healthCanvas.SetActive(false);
                     gameOverCanvas.SetActive(true);
+                    healthCanvas.SetActive(false);
                 }
                 pSlider.value = pHealth;
                 playerIFrameTimer = playerIFrames;
