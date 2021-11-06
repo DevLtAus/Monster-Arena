@@ -3143,6 +3143,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.9964
       objectReference: {fileID: 0}
+    - target: {fileID: 5677942725587127245, guid: 97e60d529c2355946ae426b24d9952d3, type: 3}
+      propertyPath: m_Text
+      value: 'Welcome to the tutorial
+
+        Let''s start with some jumps
+
+        Press
+        the spacebar or left trigger'
+      objectReference: {fileID: 0}
     - target: {fileID: 7419147095528930793, guid: 97e60d529c2355946ae426b24d9952d3, type: 3}
       propertyPath: m_Name
       value: TutorialText
