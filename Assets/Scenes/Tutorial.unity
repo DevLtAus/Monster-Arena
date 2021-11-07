@@ -1083,8 +1083,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea11ecc446bc9c44f9d4142dab2125f2, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   targetScene: MainMenu
   spinSpeed: 3
   axis: {x: 0, y: 0, z: 1}
@@ -2703,11 +2703,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: healthCanvas
-      value:
+      value: 
       objectReference: {fileID: 1133114103}
     - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: gameOverCanvas
-      value:
+      value: 
       objectReference: {fileID: 1133114102}
     - target: {fileID: 9176974047772737929, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_Name
@@ -2778,8 +2778,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a0d93785046e064589bc5d98e4c7d2b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1142028125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2914,7 +2914,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -3147,8 +3147,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e78f6809b47de9946b33a8a1acb52aa7, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   fadeSpeed: 0.0185
   show: 0
 --- !u!4 &1397296214 stripped
@@ -3202,8 +3202,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e78f6809b47de9946b33a8a1acb52aa7, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   fadeSpeed: 0.0185
   show: 0
 --- !u!4 &1487502141 stripped
@@ -3359,7 +3359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4190053676486570255, guid: 4c5eb6173186b3146bab37fe3e2203c6, type: 3}
       propertyPath: m_Sprite
-      value:
+      value: 
       objectReference: {fileID: 21300000, guid: 534940ccf06ed6a40a77170a3e0f180a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c5eb6173186b3146bab37fe3e2203c6, type: 3}
@@ -3574,7 +3574,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 378914232324770520, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value:
+      value: 
       objectReference: {fileID: 1133114104}
     - target: {fileID: 378914232324770520, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -3630,7 +3630,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1748869062371866584, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
       propertyPath: arenaBounds
-      value:
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748869062371866585, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748869062371866585, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748869062371866585, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.18039216
       objectReference: {fileID: 0}
     - target: {fileID: 2438563596700199605, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
       propertyPath: menuName
@@ -3642,7 +3654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2691869537067015672, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value:
+      value: 
       objectReference: {fileID: 1133114104}
     - target: {fileID: 2691869537067015672, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -3978,7 +3990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8673891313986912486, guid: 97e60d529c2355946ae426b24d9952d3, type: 3}
       propertyPath: buttons
-      value:
+      value: 
       objectReference: {fileID: 1381800698}
     - target: {fileID: 8673891313986912486, guid: 97e60d529c2355946ae426b24d9952d3, type: 3}
       propertyPath: hasButtons
@@ -4298,7 +4310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8673891313986912486, guid: 97e60d529c2355946ae426b24d9952d3, type: 3}
       propertyPath: buttons
-      value:
+      value: 
       objectReference: {fileID: 1412125011}
     - target: {fileID: 8673891313986912486, guid: 97e60d529c2355946ae426b24d9952d3, type: 3}
       propertyPath: hasButtons
