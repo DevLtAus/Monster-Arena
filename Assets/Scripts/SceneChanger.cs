@@ -13,6 +13,8 @@ public class SceneChanger : MonoBehaviour
     public string arenaName;
     // (Lucas) the name of the tutorial's scene.
     public string tutorialName;
+    // (Elliot) the name of the menu scene.
+    public string menuName;
 
     // (Lucas) the name of the win and lose screens' scene.
     public string winName;
@@ -29,7 +31,6 @@ public class SceneChanger : MonoBehaviour
     GameObject healthCanvas;
     GameObject gameOverCanvas;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +44,12 @@ public class SceneChanger : MonoBehaviour
 
         healthCanvas = GameObject.Find("HealthCanvas");
         gameOverCanvas = GameObject.Find("GameOverCanvas");
+        //pauseCanvas = GameObject.Find("PauseCanvas");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(menuName);
     }
 
     public void ArenaFromBeginning()

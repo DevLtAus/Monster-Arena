@@ -419,6 +419,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392018553}
   m_CullTransparentMesh: 1
+--- !u!1 &479736006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3557582828040584561, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+  m_PrefabInstance: {fileID: 565097257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &565097257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434,6 +439,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1075251056678910863, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 479736006}
     - target: {fileID: 8655219647579486810, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -718,6 +727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Local Scene Changer
       objectReference: {fileID: 0}
+    - target: {fileID: 2673926206112198463, guid: 58953851e1f092942a7f3ff543ba0769, type: 3}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 479736006}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58953851e1f092942a7f3ff543ba0769, type: 3}
 --- !u!114 &1518649151 stripped

@@ -300,6 +300,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 605212227, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1348268166}
+    - target: {fileID: 605212227, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+      propertyPath: sceneChanger
+      value: 
+      objectReference: {fileID: 1659047808}
+    - target: {fileID: 378914232324770520, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1659047808}
+    - target: {fileID: 378914232324770520, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 1748869061815764428, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -347,6 +363,22 @@ PrefabInstance:
     - target: {fileID: 1748869061815764431, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438563596700199605, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+      propertyPath: menuName
+      value: MaainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438563596700199605, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+      propertyPath: arenaName
+      value: MainArena
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691869537067015672, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1659047808}
+    - target: {fileID: 2691869537067015672, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ArenaFromBeginning
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
@@ -621,6 +653,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4370261453867561711, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
   m_PrefabInstance: {fileID: 1203258762}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1348268166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9176974047772737929, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+  m_PrefabInstance: {fileID: 3372104207189804277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1362507297
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +786,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5206934612621502162, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
   m_PrefabInstance: {fileID: 1203258762}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1659047808 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1075251056678910863, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+  m_PrefabInstance: {fileID: 3372104207189804277}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348268166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0d93785046e064589bc5d98e4c7d2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1698005369 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8573635576882045090, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
@@ -1642,6 +1690,10 @@ PrefabInstance:
       propertyPath: boss
       value: 
       objectReference: {fileID: 1203258765}
+    - target: {fileID: 1075251056678910863, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8655219647579486810, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1649,6 +1701,10 @@ PrefabInstance:
     - target: {fileID: 8655219647579486810, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098922098710192692, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: healthCanvas
