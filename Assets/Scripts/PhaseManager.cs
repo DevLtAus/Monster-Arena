@@ -13,6 +13,7 @@ public class PhaseManager : MonoBehaviour
     public string bossName;
     BossHealth boss;
     GameObject[] weakSpots;
+    public GameObject dangerZones;
     private float camBossSize;
     public float cameraSizeIncrease;
 
@@ -49,6 +50,8 @@ public class PhaseManager : MonoBehaviour
         {
             e.sprite = closedEye;
         }
+
+        dangerZones.SetActive(false);
     }
 
     // (Elliot) If the boss is activated, enable the health bar and set all weak spots to active
@@ -69,6 +72,8 @@ public class PhaseManager : MonoBehaviour
         if (cam.orthographicSize < camBossSize) {
             cam.orthographicSize += 0.05f;
         }
+
+        dangerZones.SetActive(true);
     }
 
     // Start is called before the first frame update
@@ -82,6 +87,7 @@ public class PhaseManager : MonoBehaviour
         camBossSize = cam.orthographicSize + cameraSizeIncrease;
         boss = this.GetComponent<BossHealth>();
         weakSpots = boss.weakSpots;
+
     }
 
     // Update is called once per frame
