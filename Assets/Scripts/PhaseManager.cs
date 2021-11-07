@@ -8,6 +8,7 @@ public class PhaseManager : MonoBehaviour
     private HealthManager hm;
     private Camera cam;
     public AudioSource theme;
+    private float themeStart = 3;
 
     public string bossName;
     BossHealth boss;
@@ -32,6 +33,8 @@ public class PhaseManager : MonoBehaviour
     // (Elliot) Deactivates all weakspots at the start except the ones that are required to activate the boss
     void Inactive() // PHASE 0
     {
+        themeStart = 3;
+
         if (theme.isPlaying) {
             theme.Stop();
         }
@@ -51,9 +54,10 @@ public class PhaseManager : MonoBehaviour
     // (Elliot) If the boss is activated, enable the health bar and set all weak spots to active
     void Activate() // PHASE 1
     {
+        themeStart -= Time.deltaTime;
         hm.ActivateBoss(bossName);
         EnableWeakSpots();
-        if (!theme.isPlaying) {
+        if (!theme.isPlaying && themeStart < 0) {
             theme.Play();
         }
 
