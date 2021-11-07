@@ -23,6 +23,12 @@ public class PhaseManager : MonoBehaviour
         set { phase = value; }
     }
 
+    // (Lucas) Eyes to show current phase
+    public SpriteRenderer[] eyes;
+    public Sprite closedEye;
+    public Sprite openEye;
+    //public Sprite angryEye;
+
     // (Elliot) Deactivates all weakspots at the start except the ones that are required to activate the boss
     void Inactive() // PHASE 0
     {
@@ -36,6 +42,10 @@ public class PhaseManager : MonoBehaviour
                 ws.IsActive = false;
             }
         }
+        foreach(SpriteRenderer e in eyes)
+        {
+            e.sprite = closedEye;
+        }
     }
 
     // (Elliot) If the boss is activated, enable the health bar and set all weak spots to active
@@ -45,6 +55,11 @@ public class PhaseManager : MonoBehaviour
         EnableWeakSpots();
         if (!theme.isPlaying) {
             theme.Play();
+        }
+
+        foreach(SpriteRenderer e in eyes)
+        {
+            e.sprite = openEye;
         }
 
         if (cam.orthographicSize < camBossSize) {

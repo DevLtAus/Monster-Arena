@@ -23,6 +23,18 @@ TextureImporter:
   - first:
       213: -5606441497684888800
     second: phase 2 parts LOW RES COLOURED_6
+  - first:
+      213: 7920146613607302456
+    second: phase 2 parts LOW RES COLOURED_7
+  - first:
+      213: -3698294212294334729
+    second: phase 2 parts LOW RES COLOURED_8
+  - first:
+      213: 5285813306538505662
+    second: phase 2 parts LOW RES COLOURED_9
+  - first:
+      213: 6291746208017914387
+    second: phase 2 parts LOW RES COLOURED_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -997,6 +1009,90 @@ TextureImporter:
         boneIndex[1]: 0
         boneIndex[2]: 0
         boneIndex[3]: 0
+    - serializedVersion: 2
+      name: phase 2 parts LOW RES COLOURED_7
+      rect:
+        serializedVersion: 2
+        x: 3291
+        y: 376
+        width: 336
+        height: 661
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8358311e1630aed60800000000000000
+      internalID: 7920146613607302456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts LOW RES COLOURED_8
+      rect:
+        serializedVersion: 2
+        x: 3786
+        y: 392
+        width: 336
+        height: 661
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6205122050dacc0800000000000000
+      internalID: -3698294212294334729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts LOW RES COLOURED_9
+      rect:
+        serializedVersion: 2
+        x: 4332
+        y: 387
+        width: 336
+        height: 661
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5b245623bfa5940800000000000000
+      internalID: 5285813306538505662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phase 2 parts LOW RES COLOURED_10
+      rect:
+        serializedVersion: 2
+        x: 4761
+        y: 376
+        width: 336
+        height: 661
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a91d157d5c05750800000000000000
+      internalID: 6291746208017914387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
