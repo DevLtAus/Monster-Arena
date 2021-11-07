@@ -222,18 +222,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1329475231353517139, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -20.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 1329475231353517139, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 54.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 4608579750476781529, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 56.1
-      objectReference: {fileID: 0}
     - target: {fileID: 5921651602678617362, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
       propertyPath: m_Name
       value: World
@@ -567,6 +555,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1164712675}
+    - target: {fileID: 724800674, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
+      propertyPath: cooldown
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 724800674, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
+      propertyPath: attackDelay
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 1497950455, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
       propertyPath: damage
       value: 0.1
@@ -707,6 +703,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1164712675}
+    - target: {fileID: 6907817523865196222, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
+      propertyPath: cooldown
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907817523865196222, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
+      propertyPath: attackDelay
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7912102042441098659, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
       propertyPath: target
       value: 
