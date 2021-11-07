@@ -222,21 +222,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5921651602237035339, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 144.92279
-      objectReference: {fileID: 0}
-    - target: {fileID: 5921651602237035339, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 76.66014
-      objectReference: {fileID: 0}
-    - target: {fileID: 5921651602237035339, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
+    - target: {fileID: 1329475231353517139, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0261
+      value: -20.98
       objectReference: {fileID: 0}
-    - target: {fileID: 5921651602237035339, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
+    - target: {fileID: 1329475231353517139, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.9024
+      value: 54.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608579750476781529, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 56.1
       objectReference: {fileID: 0}
     - target: {fileID: 5921651602678617362, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
       propertyPath: m_Name
@@ -285,22 +281,6 @@ PrefabInstance:
     - target: {fileID: 5921651602678617363, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5921651603103289865, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -26.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 5921651603103289865, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 11.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5921651603425956753, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 5921651603668069925, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 56.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
@@ -1033,7 +1013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803159162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.3568, y: 44.7243, z: 0}
+  m_LocalPosition: {x: 0.1368, y: 52.0779, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1093887279}
@@ -1057,13 +1037,13 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 29.15173, y: 22.152372}
+    newSize: {x: 143.13309, y: 36.85965}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 29.15173, y: 22.15237}
+  m_Size: {x: 143.1331, y: 36.85965}
   m_EdgeRadius: 0
 --- !u!212 &1803159165
 SpriteRenderer:
@@ -1110,7 +1090,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 29.15173, y: 22.152372}
+  m_Size: {x: 143.13309, y: 36.85965}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1535,7 +1515,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122292818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.3568, y: 44.7243, z: 0}
+  m_LocalPosition: {x: -0.1876, y: 51.9698, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1093887279}
@@ -1572,13 +1552,13 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 29.15173, y: 22.152372}
+    newSize: {x: 142.70053, y: 36.643356}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 29.15173, y: 22.15237}
+  m_Size: {x: 142.7005, y: 36.64336}
   m_EdgeRadius: 0
 --- !u!212 &2122292822
 SpriteRenderer:
@@ -1625,7 +1605,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 29.15173, y: 22.152372}
+  m_Size: {x: 142.70053, y: 36.643356}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
