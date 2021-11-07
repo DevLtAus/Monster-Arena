@@ -22,7 +22,7 @@ public class HealthManager : MonoBehaviour
     }
 
     // (Lucas) Player health
-    public int pHealth;
+    public float pHealth;
     public int playerMaxHealth;
     Slider pSlider;
     GameObject player;
@@ -102,7 +102,7 @@ public class HealthManager : MonoBehaviour
         bSlider.value = bHealth;
     }
 
-    public void DamagePlayer(int damage)
+    public void DamagePlayer(float damage)
     {
         switch(playerInvuln) {
             case false:
