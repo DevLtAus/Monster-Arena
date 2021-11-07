@@ -24,6 +24,7 @@ public class SceneChanger : MonoBehaviour
     // (Lucas) Maybe going to store the position and health of the player each time
     // (Lucas) a monster part breaks to reload to that point.
     private HealthManager hm;
+    private Credits credits;
     public GameObject boss = null;
     private PhaseManager pm;
 
@@ -35,6 +36,7 @@ public class SceneChanger : MonoBehaviour
     void Start()
     {
         hm = gameObject.GetComponent<HealthManager>();
+        credits = gameObject.GetComponent<Credits>();
         try {
             pm = boss.GetComponent<PhaseManager>();
         }
@@ -50,6 +52,7 @@ public class SceneChanger : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene(menuName);
+        // credits.Awake();
     }
 
     public void ArenaFromBeginning()
