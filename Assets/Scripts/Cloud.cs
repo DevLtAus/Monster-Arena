@@ -13,7 +13,7 @@ public class Cloud : MonoBehaviour
     private bool damaging = false;
     private PolygonCollider2D poly;
     private HealthManager healthy;
-    public int damage = 1;
+    public float damage = 1;
     public bool hurting = false;
 
     // (Lucas) Timer for delay before damaging the player
@@ -75,13 +75,8 @@ public class Cloud : MonoBehaviour
     {
         switch (hurting) {
             case true:
-                if (hurtDelayTimer > 0) {
-                    hurtDelayTimer -= 1;
-                }
-                else {
-                    healthy.DamagePlayer(damage);
-                    hurtDelayTimer = hurtDelay;
-                }
+                healthy.DamagePlayer(damage);
+                hurtDelayTimer = hurtDelay;
                 break;
             case false:
                 break;
