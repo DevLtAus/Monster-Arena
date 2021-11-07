@@ -68,7 +68,7 @@ public class SceneChanger : MonoBehaviour
         catch
         {
         }
-        pm.Phase = 0;
+        // pm.Phase = 0;
     }
 
     public void ArenaFromQuickSave()

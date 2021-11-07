@@ -46,6 +46,7 @@ MonoBehaviour:
   arenaName: MainArena
   tutorialName: Tutorial
   menuName: MainMenu
+  creditsName: Credits
   winName: Victory
   loseName: GameOver
   boss: {fileID: 0}
