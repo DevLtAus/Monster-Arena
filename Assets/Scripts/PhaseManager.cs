@@ -18,7 +18,7 @@ public class PhaseManager : MonoBehaviour
     public float cameraSizeIncrease;
 
     // (Elliot) Indicator of current phase represented by integer
-    private int phase = 1; // 1 by default
+    private int phase;
     public int Phase
     {
         get { return phase; }
@@ -63,6 +63,14 @@ public class PhaseManager : MonoBehaviour
         if (!theme.isPlaying && themeStart < 0) {
             theme.Play();
         }
+        foreach (GameObject i in weakSpots)
+        {
+            WeakSpot ws = i.GetComponent<WeakSpot>();
+            if (ws.canActivateBoss) {
+                ws.Damage(2);
+            }
+        }
+        // Debug.Log(phase);
 
         foreach(SpriteRenderer e in eyes)
         {
@@ -87,7 +95,6 @@ public class PhaseManager : MonoBehaviour
         camBossSize = cam.orthographicSize + cameraSizeIncrease;
         boss = this.GetComponent<BossHealth>();
         weakSpots = boss.weakSpots;
-
     }
 
     // Update is called once per frame

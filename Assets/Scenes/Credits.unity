@@ -368,6 +368,10 @@ PrefabInstance:
       value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 2673926206112198463, guid: 58953851e1f092942a7f3ff543ba0769, type: 3}
+      propertyPath: creditsName
+      value: Credits
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673926206112198463, guid: 58953851e1f092942a7f3ff543ba0769, type: 3}
       propertyPath: pauseCanvas
       value: 
       objectReference: {fileID: 0}
