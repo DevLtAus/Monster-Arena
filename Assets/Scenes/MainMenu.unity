@@ -889,17 +889,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df19c957c033ae469b649589b61d49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &764607034 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1075251056678910863, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
-  m_PrefabInstance: {fileID: 565097257}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764607032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a0d93785046e064589bc5d98e4c7d2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1115340701
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,8 +923,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 32.675873}
+  m_SizeDelta: {x: 340.0898, y: 387.3878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1115340703
 MonoBehaviour:
@@ -950,7 +939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -959,10 +948,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 12
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -970,7 +959,56 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'MONSTER ARENA
+
+
+    Credits
+
+
+    Game Director:
+
+    Lucas Turnbull
+
+
+    Level
+    Designers:
+
+    Lucas Turnbull
+
+    Elliot Holt
+
+
+    Programmers:
+
+    Lucas
+    Turnbull
+
+    Elliot Holt
+
+
+    Graphics Designer:
+
+    Daniel Rose Barrow
+
+
+    Composer:
+
+    Oliver
+    Parkinson
+
+
+    Producer:
+
+    Brittney Mckissock
+
+
+    SFX:
+
+    Vinrax - "I
+    see you" - License(s) CC0
+
+    quobodup (Independent.nu) - Heartbeat - License(s)
+    CC0'
 --- !u!222 &1115340704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1800,8 +1838,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 764607034}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+      - m_Target: {fileID: 764607033}
+        m_TargetAssemblyTypeName: Credits, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
