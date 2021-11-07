@@ -45,5 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arenaName: MainArena
   tutorialName: Tutorial
+  menuName: MainMenu
   winName: Victory
   loseName: GameOver
+  boss: {fileID: 0}
