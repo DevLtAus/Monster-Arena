@@ -9,9 +9,12 @@ public class Controls : MonoBehaviour
     Weapon weapon;
     MovePlayer player;
     CameraMovement cam;
+    Pause pause;
+
     private bool useController = true;
     private Vector2 prevMouseCoor;
     private Vector2 prevCoor;
+    private bool pauseMenuActive = false;
 
     private void Awake()
     {
@@ -32,11 +35,16 @@ public class Controls : MonoBehaviour
         weapon = GetComponentInChildren<Weapon>();
         player = this.GetComponent<MovePlayer>();
         cam = GetComponentInChildren<CameraMovement>();
+        pause = GetComponentInChildren<Pause>();
+
         prevMouseCoor = new Vector2(0, 0);
         prevCoor = new Vector2(0, 0);
 
         // Shooting
         controls.Player.Shoot.performed += _ => weapon.Shoot();
+
+        // Pause Menu
+        controls.Player.Pause.performed += _ => pauseMenuActive = !pauseMenuActive;
     }
 
     // Update is called once per frame
@@ -88,5 +96,8 @@ public class Controls : MonoBehaviour
         controls.Player.Jump.performed += _ => player.JumpButtonDown();
         controls.Player.Jump.performed += _ => player.SetJumpInput(true);
         controls.Player.Jump.canceled += _ => player.SetJumpInput(false);
+
+        // Update Pause Menu
+        pause.PauseMenu(pauseMenuActive);
     }
 }

@@ -319,6 +319,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &448147459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 51415424, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+  m_PrefabInstance: {fileID: 786581202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &543479946
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +501,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8655219647579486810, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655219647579486810, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: healthCanvas
+      value: 
+      objectReference: {fileID: 448147459}
+    - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: gameOverCanvas
+      value: 
+      objectReference: {fileID: 1184003650}
     - target: {fileID: 9176974047772737929, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -663,8 +684,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.8784314, g: 0.8784314, b: 0.8784314, a: 1}
-    m_HighlightedColor: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
     m_PressedColor: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 1}
     m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
     m_DisabledColor: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 0.5019608}
@@ -718,8 +739,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 053b4439499225841b49ee9ac338bfa5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -736,6 +757,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095357469}
   m_CullTransparentMesh: 1
+--- !u!1 &1184003650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9098922098710192692, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+  m_PrefabInstance: {fileID: 786581202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2030027454
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -795,10 +821,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
-    m_FontStyle: 0
+    m_FontSize: 18
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
