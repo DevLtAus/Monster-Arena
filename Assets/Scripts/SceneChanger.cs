@@ -15,6 +15,8 @@ public class SceneChanger : MonoBehaviour
     public string tutorialName;
     // (Elliot) the name of the menu scene.
     public string menuName;
+    // (Elliot) the name of the credits scene.
+    public string creditsName;
 
     // (Lucas) the name of the win and lose screens' scene.
     public string winName;
@@ -24,7 +26,6 @@ public class SceneChanger : MonoBehaviour
     // (Lucas) Maybe going to store the position and health of the player each time
     // (Lucas) a monster part breaks to reload to that point.
     private HealthManager hm;
-    private Credits credits;
     public GameObject boss = null;
     private PhaseManager pm;
 
@@ -36,7 +37,7 @@ public class SceneChanger : MonoBehaviour
     void Start()
     {
         hm = gameObject.GetComponent<HealthManager>();
-        credits = gameObject.GetComponent<Credits>();
+
         try {
             pm = boss.GetComponent<PhaseManager>();
         }
@@ -52,7 +53,6 @@ public class SceneChanger : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene(menuName);
-        // credits.Awake();
     }
 
     public void ArenaFromBeginning()
@@ -97,6 +97,11 @@ public class SceneChanger : MonoBehaviour
     public void Win()
     {
         SceneManager.LoadScene(winName);
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(creditsName);
     }
 
     // Update is called once per frame

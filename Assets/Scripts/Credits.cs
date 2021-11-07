@@ -26,7 +26,7 @@ public class Credits : MonoBehaviour
         menuCanvas = GameObject.Find("MenuCanvas");
         creditsCanvas = GameObject.Find("CreditsCanvas");
 
-        creditsCanvas.SetActive(false);
+        creditsCanvas.SetActive(true);
     }
 
     // Update is called once per frame
