@@ -20,8 +20,8 @@ public class CameraMovement : MonoBehaviour
     private float camY, camX;
     private float camOrthSize;
     //private float camRatio;
-    private float height;
-    private float width;
+    //private float height;
+    //private float width;
 
     // (Lucas) How much the camera gets pushed around by movement and mouse position.
     // (Lucas) Seperate values since the movement will push first and, ideally, push
@@ -76,10 +76,12 @@ public class CameraMovement : MonoBehaviour
         // (Lucas) Stuff for camera bounds.
         camOrthSize = cam.orthographicSize;
         //height = cam.orthographicSize / cam.aspect;
-        width = cam.orthographicSize * cam.aspect;
-        height = cam.orthographicSize/width;
-        boundsMin = new Vector2(arenaBounds.bounds.min.x + width/2, arenaBounds.bounds.min.y + height/2);
-        boundsMax = new Vector2(arenaBounds.bounds.max.x - width/2, arenaBounds.bounds.max.y - height/2);
+        //width = cam.orthographicSize * cam.aspect;
+        //height = cam.orthographicSize/width;
+        if(arenaBounds != null) {
+            boundsMin = new Vector2(arenaBounds.bounds.min.x, arenaBounds.bounds.min.y);
+            boundsMax = new Vector2(arenaBounds.bounds.max.x, arenaBounds.bounds.max.y);
+        }
         //camRatio = (boundsMax.x + camOrthSize) / 2.0f;
     }
 
@@ -161,10 +163,16 @@ public class CameraMovement : MonoBehaviour
             //playerTrans.position.y + camOffset.y + (mpDir.y * mouseInfluence.y), this.transform.position.z);
 
         // (Lucas) Clamping to camera bounds
-        camY = Mathf.Clamp(playerTrans.position.y + camOffset.y + (mpDir.y * mouseInfluence.y),
-            boundsMin.y + camOrthSize, boundsMax.y - camOrthSize);
-        camX = Mathf.Clamp(playerTrans.position.x + camOffset.x + (mpDir.x * mouseInfluence.x),
-            boundsMin.x + camOrthSize, boundsMax.x - camOrthSize);
+        if (arenaBounds != null) {
+            camY = Mathf.Clamp(playerTrans.position.y + camOffset.y + (mpDir.y * mouseInfluence.y),
+                boundsMin.y + camOrthSize, boundsMax.y - camOrthSize);
+            camX = Mathf.Clamp(playerTrans.position.x + camOffset.x + (mpDir.x * mouseInfluence.x),
+                boundsMin.x + camOrthSize, boundsMax.x - camOrthSize);
+        }
+        else {
+            camY = playerTrans.position.y + camOffset.y + (mpDir.y * mouseInfluence.y);
+            camX = playerTrans.position.x + camOffset.x + (mpDir.x * mouseInfluence.x);
+        }
         targetPos = new Vector3(camX, camY, this.transform.position.z);
 
         
