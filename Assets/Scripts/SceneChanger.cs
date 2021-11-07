@@ -28,13 +28,14 @@ public class SceneChanger : MonoBehaviour
     private HealthManager hm;
     public GameObject boss = null;
     private PhaseManager pm;
+    private int savedPhase;
 
     // (Elliot) Canvases to enable/disable on save changing
     GameObject healthCanvas;
     GameObject gameOverCanvas;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         hm = gameObject.GetComponent<HealthManager>();
 
@@ -48,6 +49,7 @@ public class SceneChanger : MonoBehaviour
         healthCanvas = GameObject.Find("HealthCanvas");
         gameOverCanvas = GameObject.Find("GameOverCanvas");
         //pauseCanvas = GameObject.Find("PauseCanvas");
+        savedPhase = 0;
     }
 
     public void MainMenu()
@@ -66,20 +68,23 @@ public class SceneChanger : MonoBehaviour
         catch
         {
         }
+        pm.Phase = 0;
     }
 
     public void ArenaFromQuickSave()
     {
+        savedPhase = pm.Phase;
+
         SceneManager.LoadScene(arenaName);
         healthCanvas.SetActive(true);
         try {
             hm.Start();
             gameOverCanvas.SetActive(false);
-            pm.Phase = 1;
         }
         catch
         {
         }
+        pm.Phase = 1;
     }
 
     public void TutorialLevel()

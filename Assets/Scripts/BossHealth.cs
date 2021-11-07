@@ -14,7 +14,7 @@ public class BossHealth : MonoBehaviour
     PhaseManager pm;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         gm = GameObject.Find("Game Manager");
         hm = gm.GetComponent<HealthManager>();
