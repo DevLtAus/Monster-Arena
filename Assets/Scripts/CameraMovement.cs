@@ -19,7 +19,9 @@ public class CameraMovement : MonoBehaviour
     private Vector2 boundsMax;
     private float camY, camX;
     private float camOrthSize;
-    private float camRatio;
+    //private float camRatio;
+    private float height;
+    private float width;
 
     // (Lucas) How much the camera gets pushed around by movement and mouse position.
     // (Lucas) Seperate values since the movement will push first and, ideally, push
@@ -72,10 +74,13 @@ public class CameraMovement : MonoBehaviour
         arenaBounds = GameObject.Find("Background").GetComponent<BoxCollider2D>();
 
         // (Lucas) Stuff for camera bounds.
-        boundsMin = new Vector2(arenaBounds.bounds.min.x, arenaBounds.bounds.min.y);
-        boundsMax = new Vector2(arenaBounds.bounds.max.x, arenaBounds.bounds.max.y);
         camOrthSize = cam.orthographicSize;
-        camRatio = (boundsMax.x + camOrthSize) / 2.0f;
+        //height = cam.orthographicSize / cam.aspect;
+        width = cam.orthographicSize * cam.aspect;
+        height = cam.orthographicSize/width;
+        boundsMin = new Vector2(arenaBounds.bounds.min.x + width/2, arenaBounds.bounds.min.y + height/2);
+        boundsMax = new Vector2(arenaBounds.bounds.max.x - width/2, arenaBounds.bounds.max.y - height/2);
+        //camRatio = (boundsMax.x + camOrthSize) / 2.0f;
     }
 
     // (Elliot) Set the Mouse's influence on the camera

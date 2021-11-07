@@ -222,6 +222,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5921651602237035339, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 144.92279
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921651602237035339, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 76.66014
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921651602237035339, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0261
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921651602237035339, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 29.9024
+      objectReference: {fileID: 0}
     - target: {fileID: 5921651602678617362, guid: 8095d90a082869f47b607c430642a0c5, type: 3}
       propertyPath: m_Name
       value: World

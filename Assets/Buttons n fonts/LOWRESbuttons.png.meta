@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: 0b0b43e175ce1834e8883d7d019b7cb4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4916643578885495300
+    second: LOWRESbuttons_0
+  - first:
+      213: -3296616970321175583
+    second: LOWRESbuttons_1
+  - first:
+      213: -478051108755294197
+    second: LOWRESbuttons_2
+  - first:
+      213: -3098512044018485632
+    second: LOWRESbuttons_3
+  - first:
+      213: 4963434776495329595
+    second: LOWRESbuttons_4
+  - first:
+      213: 5980859680443708284
+    second: LOWRESbuttons_5
+  - first:
+      213: -3635226601876789868
+    second: LOWRESbuttons_6
+  - first:
+      213: -3908272323053310672
+    second: LOWRESbuttons_7
+  - first:
+      213: -1701929067610110912
+    second: LOWRESbuttons_8
+  - first:
+      213: 3384991934876831722
+    second: LOWRESbuttons_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +71,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +105,267 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: LOWRESbuttons_0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1020
+        width: 222
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf52359e6b294cbb0800000000000000
+      internalID: -4916643578885495300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOWRESbuttons_1
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 1019
+        width: 214
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb5b7be4501042d0800000000000000
+      internalID: -3296616970321175583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOWRESbuttons_2
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 647
+        width: 196
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08b826ac0f9d59f0800000000000000
+      internalID: -478051108755294197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOWRESbuttons_3
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 66
+        width: 633
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086320c66bfdff4d0800000000000000
+      internalID: -3098512044018485632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOWRESbuttons_4
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 887
+        width: 201
+        height: 274
+      alignment: 9
+      pivot: {x: 0.5148546, y: 0.57489103}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3113deb1a9a1e440800000000000000
+      internalID: 4963434776495329595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOWRESbuttons_5
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 876
+        width: 199
+        height: 273
+      alignment: 9
+      pivot: {x: 0.5150815, y: 0.5771717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73bd400138400350800000000000000
+      internalID: 5980859680443708284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOWRESbuttons_6
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 615
+        width: 135
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49565157aa41d8dc0800000000000000
+      internalID: -3635226601876789868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOWRESbuttons_7
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 353
+        width: 134
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03daae2770703c9c0800000000000000
+      internalID: -3908272323053310672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOWRESbuttons_8
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 608
+        width: 182
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044003cb7888168e0800000000000000
+      internalID: -1701929067610110912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LOWRESbuttons_9
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 337
+        width: 182
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef45e5fa38e9fe20800000000000000
+      internalID: 3384991934876831722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

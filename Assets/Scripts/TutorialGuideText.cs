@@ -8,6 +8,8 @@ public class TutorialGuideText : MonoBehaviour
     public float fadeTime;
     public Text textToShow;
     public bool showing;
+    public bool hasButtons = false;
+    public TutorialButtons buttons;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -15,6 +17,14 @@ public class TutorialGuideText : MonoBehaviour
         if (col.gameObject.tag == "Player") {
             //Debug.Log("Showing text");
             showing = true;
+            if (hasButtons){
+                try {
+                    buttons.show = true;
+                    StopCoroutine(buttons.FadeOut());
+                }
+                catch {}
+                StartCoroutine(buttons.FadeIn());
+            }
         }
     }
 
@@ -24,6 +34,14 @@ public class TutorialGuideText : MonoBehaviour
         if (col.gameObject.tag == "Player") {
             //Debug.Log("Hiding text");
             showing = false;
+            if (hasButtons){
+                try {
+                    buttons.show = false;
+                    StopCoroutine(buttons.FadeIn());
+                }
+                catch {}
+                StartCoroutine(buttons.FadeOut());
+            }
         }
     }
 
