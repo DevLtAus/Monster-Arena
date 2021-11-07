@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
 
 public class Pause : MonoBehaviour
 {
@@ -25,7 +24,13 @@ public class Pause : MonoBehaviour
         gm = GameObject.Find("Game Manager");
         sc = gm.GetComponent<SceneChanger>();
 
-        restart.onClick.AddListener(delegate {sc.ArenaFromBeginning();});
+        if (SceneManager.GetActiveScene().name == "Tutorial") {
+            restart.onClick.AddListener(delegate {sc.TutorialLevel();});
+        }
+        if (SceneManager.GetActiveScene().name == "MainArena") {
+            restart.onClick.AddListener(delegate {sc.ArenaFromBeginning();});
+        }
+        
         mainMenu.onClick.AddListener(delegate {sc.MainMenu();});
     }
 
