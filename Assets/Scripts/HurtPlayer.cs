@@ -40,14 +40,14 @@ public class HurtPlayer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player") {
+        if (col.gameObject.tag == "Player" && !healthy.playerInvuln) {
             Hurt();
         }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Player") {
+        if (col.gameObject.tag == "Player" && !healthy.playerInvuln) {
             Hurt();
         }
     }
