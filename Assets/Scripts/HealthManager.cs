@@ -22,11 +22,12 @@ public class HealthManager : MonoBehaviour
     }
 
     // (Lucas) Player health
-    public int pHealth;
+    public float pHealth;
     public int playerMaxHealth;
     Slider pSlider;
     GameObject player;
     Rigidbody2D playerBody;
+    SpriteRenderer[] playerRenders;
     
     // (Lucas) Player invulnerability
     public float playerIFrames;
@@ -47,6 +48,7 @@ public class HealthManager : MonoBehaviour
             player = GameObject.Find("Player");
             playerBody = player.GetComponent<Rigidbody2D>();
             playerBody.bodyType = RigidbodyType2D.Dynamic;
+            playerRenders = player.GetComponentsInChildren<SpriteRenderer>();
         }
         catch
         {
@@ -55,6 +57,7 @@ public class HealthManager : MonoBehaviour
         // healthCanvas = GameObject.Find("HealthCanvas");
         // gameOverCanvas = GameObject.Find("GameOverCanvas");
         gameOverCanvas.SetActive(false);
+        
     }
 
     void Awake()
@@ -102,15 +105,21 @@ public class HealthManager : MonoBehaviour
         bSlider.value = bHealth;
     }
 
-    public void DamagePlayer(int damage)
+    public void DamagePlayer(float damage)
     {
+        GameObject player = GameObject.Find("Player");
+        playerRenders = player.GetComponentsInChildren<SpriteRenderer>();
+        foreach (SpriteRenderer sr in playerRenders)
+        {
+            sr.color = Color.red;
+        }
+
         switch(playerInvuln) {
             case false:
                 pHealth -= damage;
                 if (pHealth <= 0) {
                     pHealth = 0;
                     // (Elliot) Disable player rigidbody, deactivate health canvas and activate game over canvas
-                    GameObject player = GameObject.Find("Player");
                     Rigidbody2D playerBody = player.GetComponent<Rigidbody2D>();
                     GameObject playerRender = player.transform.Find("PlayerBody").gameObject;
 
@@ -127,6 +136,7 @@ public class HealthManager : MonoBehaviour
             case true:
                 // (Lucas) Player is invulnerable.
                 //Debug.Log("Player was hit while invulnerable");
+                
                 break;
         }
     }
@@ -146,6 +156,18 @@ public class HealthManager : MonoBehaviour
         }
         else {
             playerInvuln = false;
+
+            GameObject player = GameObject.Find("Player");
+            try {
+                playerRenders = player.GetComponentsInChildren<SpriteRenderer>();
+                foreach (SpriteRenderer sr in playerRenders)
+                {
+                    sr.color = Color.white;
+                }
+            }
+            catch
+            {
+            }
         }
     }
 }

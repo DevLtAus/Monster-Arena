@@ -382,7 +382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2438563596700199605, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
       propertyPath: menuName
-      value: MaainMenu
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 2438563596700199605, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
       propertyPath: arenaName
@@ -398,6 +398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+--- !u!212 &615738384 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1345817786106084406, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+  m_PrefabInstance: {fileID: 553097037}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &682000168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1748869062371866586, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
@@ -499,6 +504,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!212 &843829171 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6553182733158576097, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+  m_PrefabInstance: {fileID: 553097037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &976328871 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 956089439714236923, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+  m_PrefabInstance: {fileID: 553097037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &996434271 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2808323440353627438, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+  m_PrefabInstance: {fileID: 553097037}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1093887278
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,10 +567,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 312935612, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
+      propertyPath: damage
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 724800674, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1164712675}
+    - target: {fileID: 1497950455, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
+      propertyPath: damage
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2237036696019119405, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -667,6 +695,11 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4370261453867561711, guid: 3d7c72dc9d0f7944ca688b034e61e48e, type: 3}
   m_PrefabInstance: {fileID: 1203258762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1308670302 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7315742459589533022, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+  m_PrefabInstance: {fileID: 553097037}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1348268166 stripped
 GameObject:
@@ -1067,6 +1100,11 @@ SpriteRenderer:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9098922098710192692, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
   m_PrefabInstance: {fileID: 3372104207189804277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1875127670 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6562438964990299020, guid: 5be8b0e32ccdfbc4b821cccfc4243c7b, type: 3}
+  m_PrefabInstance: {fileID: 553097037}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2081955720
 GameObject:
@@ -1729,6 +1767,34 @@ PrefabInstance:
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 1867370599}
+    - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: playerRenders.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: playerRenders.Array.data[0]
+      value: 
+      objectReference: {fileID: 615738384}
+    - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: playerRenders.Array.data[1]
+      value: 
+      objectReference: {fileID: 996434271}
+    - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: playerRenders.Array.data[2]
+      value: 
+      objectReference: {fileID: 1875127670}
+    - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: playerRenders.Array.data[3]
+      value: 
+      objectReference: {fileID: 976328871}
+    - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: playerRenders.Array.data[4]
+      value: 
+      objectReference: {fileID: 1308670302}
+    - target: {fileID: 9176974047772737928, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
+      propertyPath: playerRenders.Array.data[5]
+      value: 
+      objectReference: {fileID: 843829171}
     - target: {fileID: 9176974047772737929, guid: a1119f33ec9a5be41b8085883566fd57, type: 3}
       propertyPath: m_Name
       value: Game Manager
